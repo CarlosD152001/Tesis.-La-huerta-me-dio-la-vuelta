@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Estudio de caso - Huerta Santa Elena</title>
+  <link rel="stylesheet" href="inicio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <a href="#" class="logo"></a>
+            <input type="checkbox" id="menú_bar">
+            <label for="menú_bar">Menú</label>
+
+            <nav class="nav_bar">
+                <ul class="nav_list">
+                    <li class="nav_element">
+                        <a href="index.html" class="nav_opción_inicio">
+                        <img src="Imagenes/flecha-izquierda.png" alt="Inicio" class="icono_inicio">
+                        </a>
+                    </li>
+                    <li class="nav_element">
+                        <a href="index.html" class="nav_opción_inicio">
+                            <img src="Imagenes/inicio.svg" alt="Inicio" class="icono_inicio">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero_section1_inicio">
+            <div class="container_hero">
+                <h1 class="hero_title_inicio">Contextualización</h1>
+            </div>
+            <a href="introducción.html">
+                <button  class="boton_secciones_inicio">Ir a la sección</button> <!--Con este botón puedo ir a cualquier id de la web, osea dentro
+                por si quiero pasar de una sección a otra solo presionando el botón-->
+                <!--Si quiero que ese botón me lleve a otro lugar lo debo envolver en un (form action)-->
+            </a>
+        </section>
+
+        <section class="hero_section2_inicio">
+            <div class="container_hero">
+                <h1 class="hero_title_inicio">PENSAR LA CIUDAD DESDE ABAJO</h1>
+            </div>
+            <a href="conceptos.html">
+                <button  class="boton_secciones_inicio">Ir a la sección</button> <!--Con este botón puedo ir a cualquier id de la web, osea dentro
+                por si quiero pasar de una sección a otra solo presionando el botón-->
+                <!--Si quiero que ese botón me lleve a otro lugar lo debo envolver en un (form action)-->
+            </a>
+        </section>
+
+        <section class="hero_section3_inicio">
+            <div class="container_hero">
+                <h1 class="hero_title_inicio">SANTA ELENA</h1>
+                <p class="hero_subtitle"></p>
+            </div>
+            <a href="Santa_Elena.html">
+                <button  class="boton_secciones_inicio">Ir a la sección</button> <!--Con este botón puedo ir a cualquier id de la web, osea dentro
+                por si quiero pasar de una sección a otra solo presionando el botón-->
+                <!--Si quiero que ese botón me lleve a otro lugar lo debo envolver en un (form action)-->
+            </a>
+        </section>
+
+        <section class="hero_section4_inicio">
+            <div class="container_hero">
+                <h1 class="hero_title_inicio">COMPOSTEMONOS</h1>
+                <p class="hero_subtitle"></p>
+            </div>
+            <a href="conclusiones.html">
+                <button  class="boton_secciones_inicio">Ir a la sección</button> <!--Con este botón puedo ir a cualquier id de la web, osea dentro
+                por si quiero pasar de una sección a otra solo presionando el botón-->
+                <!--Si quiero que ese botón me lleve a otro lugar lo debo envolver en un (form action)-->
+            </a>
+        </section>
+
+        <!-- Sección del Footer -->
+        <footer class="footer" id="pie_página">
+            <div class="container_footer">
+                <h1 class="footer_section"></h1>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Apartado JS para devolver las trajetas a su estado frontal -->
+        <script> 
+            window.addEventListener('scroll', () => {
+            const flippedCards = document.querySelectorAll('.card.flipped');
+            flippedCards.forEach(card => {
+                card.classList.remove('flipped');
+            });
+            });
+        </script>
+  
+        <script>
+            let lastScrollTop = 0;
+            const header = document.querySelector("header");
+            const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
+    
+            window.addEventListener("scroll", () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop) {
+                    // Scroll hacia abajo: ocultar header
+                    header.classList.add("header-hidden");
+                } else {
+                    // Scroll hacia arriba: mostrar header
+                    header.classList.remove("header-hidden");
+                }
+    
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+    
+            // Ocultar menú cuando se hace clic en una opción
+            navLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    header.classList.add("header-hidden");
+                });
+            });
+        </script>
+  
+        <script>
+            document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
+                const target = document.getElementById(targetId);
+                const offset = 100; // Altura del header
+    
+                window.scrollTo({
+                top: target.offsetTop - offset,
+                behavior: 'smooth'
+                });
+            });
+            });
+        </script>
+  
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                history.replaceState(null, null, window.location.pathname);
+                window.scrollTo(0, 0);
+            }
+            });
+        </script>
+
+    </body>
+</html>

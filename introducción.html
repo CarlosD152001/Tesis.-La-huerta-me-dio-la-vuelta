@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Introducción</title>
+  <link rel="stylesheet" href="introducción.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <a href="index.html" class="logo"></a>
+            <input type="checkbox" id="menú_bar">
+            <label for="menú_bar">Menú</label>
+            <nav class="nav_bar">
+                <ul class="nav_list">
+                <li class="nav_element">
+                    <a href="inicio.html" class="nav_opción_inicio">
+                    <img src="Imagenes/flecha-izquierda.png" alt="Inicio" class="icono_inicio">
+                    </a>
+                </li>
+                <li class="nav_element">
+                    <a href="inicio.html" class="nav_opción_inicio">
+                    <img src="Imagenes/inicio.svg" alt="Inicio" class="icono_inicio">
+                    </a>
+                </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero_section_introducción">
+        <div class="hero_texto">
+            <h1></h1>
+            <p>
+                Bogotá se configura como un espacio marcado por desigualdades profundas, que se manifiestan tanto en su organización urbana como en el acceso diferenciado a bienes esenciales: la tierra, la vivienda, el empleo y, de manera primordial, la alimentación (Czerny & Czerny, 2017). Pese a los ambiciosos proyectos de infraestructura y expansión que definen su crecimiento, persisten fracturas estructurales que reproducen la informalidad y la precariedad, reforzadas a menudo por el propio modelo de desarrollo cuando éste ignora las necesidades de las personas y se centra exclusivamente en su dimensión física (Czerny & Czerny, 2017).
+            </p>
+            <p>
+                En este escenario, la inseguridad alimentaria se erige como una de las muestras más evidentes de la exclusión urbana. No se trata únicamente de la falta de comida suficiente, sino de la imposibilidad de numerosas comunidades para decidir sobre sus propias prácticas alimentarias, apropiarse de su territorio y gestar soluciones locales ajustadas a sus realidades. Abordar la alimentación desde lo urbano implica ir más allá del simple acto de comer: supone interrogarse por los circuitos de producción y distribución, por quién ejerce el control sobre los alimentos, por la desconexión de los saberes tradicionales de cultivo y por el aprecio que merecen los procesos de siembra y cosecha.
+            </p>
+        </div>
+        </section>
+
+        <div class="container_carrusel">
+
+            <div class="carrusel">
+                <div class="atras">
+                    <img id="atras" src="Imagenes/atras def.png" alt="atras" loading="lazy">
+                </div>
+
+                <div class="imagenes">
+                    <div id="img">
+                        <img class="img" src="Imagenes/imagen hambre 2.jpeg" alt="imagen 1" class="img" loading="lazy">
+                    </div>
+                    <div id="texto" class="texto">
+                        <p>Poner aquí el link</p>
+                    </div>
+                </div>
+
+                <div class="adelante" id="adelante">
+                    <img src="Imagenes/adelante def.png" alt="adelante" loading="lazy">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="puntos" id="puntos"></div>
+
+        <script src="galeria.js"></script>
+
+        <div class="container_introducción_inseguridad_alimentaria">
+            <section id="ciudad" class="subseccion_soberanía_discusión">
+                <h3>¿Qué es la inseguridad alimentaria?</h3>
+                <p>
+                    La inseguridad alimentaria es un fenómeno complejo que trasciende la simple ausencia de alimentos en el plato. Se refiere, en términos generales, a la situación en la que las personas no tienen acceso físico, social y económico, de forma constante y suficiente, a alimentos seguros y nutritivos que les permitan llevar una vida activa y saludable (FAO, 2011). Esta definición, ampliamente difundida desde la Cumbre Mundial de la Alimentación de 1996, no solo pone énfasis en la cantidad de comida disponible, sino también en su calidad, adecuación cultural, inocuidad y estabilidad en el tiempo.
+                </p>
+
+                <div class="flip_container" onclick="this.classList.toggle('flip_active')">
+                    <div class="flip_inner">
+                        <!-- Frente -->
+                        <div class="flip_front">
+                                <img src="Imagenes/UNICEF. State of FSN.jpg" alt="Foto" class="foto_despojo_prueba">
+                        </div>
+                            <!-- Reverso con referencia -->
+                        <div class="flip_back">
+                                <h1>Referencia</h1>
+                                <a href="https://periodico.unal.edu.co/articulos/falta-de-acceso-a-alimentos-tradicionales-pone-en-riesgo-la-seguridad-alimentaria-de-comunidades-indigenas-en-leticia" target="_blank">
+                                    https://periodico.unal.edu.co/articulos/falta-de-acceso-a-alimentos-tradicionales-pone-en-riesgo-la-seguridad-alimentaria-de-comunidades-indigenas-en-leticia
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="titulo_dimensiones">
+                    <h4>La inseguridad alimentaria puede entenderse desde cuatro dimensiones clave propuestas por la FAO:</h4>
+                </div>
+
+                <div class="dimensiones-container">
+                    
+                    <ul class="dimensiones-list">
+                        <li>
+                        <div class="texto-item">
+                            <h5>Disponibilidad</h5> 
+                            <p>Existe una oferta suficiente de alimentos, ya sea por producción local, importaciones o reservas.</p>
+                        </div>
+                        </li>
+                        <li>
+                        <span class="icon">💰</span>
+                        <div class="texto-item">
+                            <h5>Acceso</h5>
+                            <p>Las personas cuentan con recursos económicos, redes de intercambio o apoyo social para adquirirlos. (FAO, 2011)</p>
+                        </div>
+                        </li>
+                        <li>
+                        <span class="icon">🍽️</span>
+                        <div class="texto-item">
+                            <h5>Utilización</h5>
+                            <p>Los alimentos aportan nutrientes adecuados y son aprovechados correctamente por el organismo. (FAO, 2011)</p>
+                        </div>
+                        </li>
+                        <li>
+                        <span class="icon">⏳</span>
+                        <div class="texto-item">
+                            <h5>Estabilidad</h5>
+                            <p>Todas las dimensiones anteriores se mantienen a lo largo del tiempo, sin verse afectadas por crisis o estacionalidad. (FAO, 2011)</p>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <p>
+                    Desde esta mirada integral, la inseguridad alimentaria no se manifiesta únicamente en contextos de hambre aguda o de emergencia, sino también en situaciones donde las personas consumen alimentos de baja calidad, de manera insuficiente o con incertidumbre sobre su disponibilidad futura. En este sentido, la inseguridad alimentaria incluye tanto la malnutrición como la ansiedad alimentaria, la pérdida de autonomía para decidir qué comer, y el deterioro del bienestar individual y colectivo (Llobet, 2014).
+                </p>
+
+            </section>
+        </div>
+
+         <div class="container_introducción_inseguridad_alimentaria">
+            <section id="ciudad" class="subseccion_soberanía_discusión">
+                <h3>Perspectivas</h3>
+                <p>
+                    Desde la perspectiva institucional, organismos como la FAO y la ONU han clasificado la inseguridad alimentaria en distintos niveles. En su forma moderada, se expresa cuando las personas se ven obligadas a reducir la calidad o la cantidad de lo que comen, ya sea por falta de dinero, por acceso limitado o por condiciones estructurales que impiden sostener una alimentación adecuada. En su forma más grave, la inseguridad alimentaria significa saltarse comidas, pasar días sin comer o depender de alimentos en mal estado, en una lógica de supervivencia cotidiana (FAO et al., 2022). Esta forma de categorizar el fenómeno nos recuerda que no se trata solo de cifras o estadísticas: la inseguridad alimentaria es también una experiencia íntima, marcada por la ansiedad, la incertidumbre y la pérdida de control sobre algo tan básico como alimentarse (Riches & Silvasti, 2014).
+                </p>
+
+                <div class="flip_container" onclick="this.classList.toggle('flip_active')">
+                    <div class="flip_inner">
+                        <!-- Frente -->
+                        <div class="flip_front">
+                                <img src="Imagenes/FAO LOGO.png" alt="Foto" class="foto_despojo_prueba">
+                        </div>
+                            <!-- Reverso con referencia -->
+                        <div class="flip_back">
+                                <h1>Logo FAO</h1>
+                                <a href="https://www.fuhem.es/2019/08/29/fao-y-el-nuevo-liderazgo-de-qu-dongyu/" target="_blank">
+                                    https://www.fuhem.es/2019/08/29/fao-y-el-nuevo-liderazgo-de-qu-dongyu/
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="titulo_dimensiones">
+                    <h4>La inseguridad alimentaria puede entenderse desde cuatro dimensiones clave propuestas por la FAO:</h4>
+                </div>
+
+                <p>
+                    Pero hay otras formas de nombrar y comprender este fenómeno. Desde la academia crítica, autores como Llobet (2014) y Díaz-Méndez et al. (2019) amplían el marco y señalan que la inseguridad alimentaria no puede reducirse a la falta de acceso. Se trata también de relaciones de poder, de desigualdades históricas, de despojo y de silenciamiento de saberes. Cuando una comunidad no puede decidir sobre su alimentación, no puede sembrar, intercambiar, elegir, o siquiera nombrar sus propias formas de nutrirse, también está en una situación de inseguridad, aunque tenga supermercados cerca. Porque tener alimentos disponibles no es lo mismo que tener soberanía. Esta mirada empuja a pensar que no basta con producir más comida: lo urgente es transformar las condiciones que impiden a las personas decidir cómo alimentarse, desde dónde y con qué sentidos.
+                </p>
+
+                <div class="flip_container" onclick="this.classList.toggle('flip_active')">
+                    <div class="flip_inner">
+                        <!-- Frente -->
+                        <div class="flip_front">
+                                <img src="Imagenes/UNICEF. State of FSN.jpg" alt="Foto" class="foto_despojo_prueba">
+                        </div>
+                            <!-- Reverso con referencia -->
+                        <div class="flip_back">
+                                <h1>Referencia</h1>
+                                <a href="https://periodico.unal.edu.co/articulos/falta-de-acceso-a-alimentos-tradicionales-pone-en-riesgo-la-seguridad-alimentaria-de-comunidades-indigenas-en-leticia" target="_blank">
+                                    https://periodico.unal.edu.co/articulos/falta-de-acceso-a-alimentos-tradicionales-pone-en-riesgo-la-seguridad-alimentaria-de-comunidades-indigenas-en-leticia
+                                </a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <main class="accordion">
+
+            <!-- Contexto -->
+            <section class="caja">
+                <div class="header">
+                <span class="icono">📈</span>
+                <h2>¿Por qué es importante hablar de esta problemática?</h2>
+                <button class="btn-toggle">Ver más ›</button>
+                </div>
+                <div class="contenido">
+                    <section class="subseccion">
+                        <p>
+                            Hablar de inseguridad alimentaria es indispensable para comprender las múltiples formas de exclusión y desigualad que atraviesan los sistemas alimentarios contemporáneos. Una vez se reconoce que esta problemática no se reduce al conteo de calorías o al consumo como un acto individual, es cuando se abre la posibilidad de entenderla como una expresión de las relaciones sociales, económicas, políticas y culturales que condicionan no solo lo que comemos, sino también quién tiene el poder de decidir sobre nuestra alimentación y bajo qué limitaciones se ejerce esta presión (Anderson. S, 1990).
+                        </p>
+                        <p>
+                            Si bien podría abordarse desde una perspectiva técnica, la inseguridad alimentaria posee una dimensión social profunda, estrechamente relacionada con las lógicas de control impuestas por los sistemas de producción y distribución alimentaria que entorpecen el desarrollo comunitario y social (Kaiser. M, 2011). Estas dinámicas estructurales reproducen prácticas desiguales que, en muchos casos, terminan por arrebatar el derecho a la alimentación, llegando al punto de decidir quién vive y quién muere (Piketty, 2021). Esta lógica de circulación global de alimentos, desprovista de objetivos sociales y ecológicos, se asemeja a una forma de neocolonialismo en beneficio de los más ricos y capaces (Piketty, 2021).
+                        </p>
+                        <img src="Imagenes/UNAL imagen alimentos.jpg" alt="Estadisticas" style="display:block; width:50%; border-radius:10px; margin:2rem auto 0; margin-bottom: 2rem;">
+                        <p>
+                            Explorar las múltiples dimensiones de la inseguridad alimentaria permite desnaturalizar el hambre y la malnutrición. Lejos de ser fenómenos puntuales o inevitables, deben abordarse como el resultado de las decisiones políticas que enmarcan a las personas en esta condición de imposibilidad alimentaria. En este sentido, es fundamental considerar también los efectos subjetivos y emocionales de vivir bajo estas condiciones, tales como la ansiedad, la incertidumbre y la pérdida del derecho a la alimentación (Radimer. K, 1992), las cuales terminan por definir y condicionar la cotidianidad y desarrollo de quienes dependen del sistema. Si bien estas experiencias son distintas para todas las personas, realmente convergen en la necesidad de plantear soluciones que permitan apropiarse de la alimentación y aportar al desarrollo individual y colectivo.
+                        </p>
+                        <p>
+                            Hablar de inseguridad alimentaria es una forma de restituir el carácter político de la alimentación, pues comer no es solo una necesidad biológica, sino también una práctica social, cultural y política. Discutir sobre quién decide lo que se produce, cómo se distribuye y qué llega a los hogares, es una manera de disputar el sentido del alimento como un derecho, y además como una expresión de autonomía. 
+                        </p>
+                    </section>
+                <!-- resto de subsecciones… -->
+                </div>
+            </section>
+
+
+            <!-- Objetivos -->
+            <section class="caja">
+                <div class="header">
+                <span class="icono">🎯</span>
+                <h2>Situación en Colombia</h2>
+                <button class="btn-toggle">Ver más ›</button>
+                </div>
+                <div class="contenido">
+                    <section class="subseccion">
+                        <p>
+                            La inseguridad alimentaria en Colombia constituye una problemática compleja que pone en evidencia, no solo la dificultad e imposibilidad de millones de personas para acceder a alimentos suficientes y adecuados, sino también las profundas brechas sociales, territoriales y estructurales que atraviesan el país. Por lo tanto, el hambre en Colombia además de estar ligada a las carencias nutricionales, lo está de igual manera con la marginación y la violencia que se ejerce hacia las diferentes poblaciones del país, especialmente a lo que se refiere la distribución desigual de la tierra, el conflicto armado, la pobreza estructural y las transformaciones en el uso del suelo (FAO, 2023). En el contexto de nuestro país, esta problemática no debe pensarse como una condición efímera, sino como una expresión prolongada de las múltiples formas de exclusión, violencia y despojo. 
+                        </p>
+                        <h3>A lo largo de los años:</h3>
+                        <p>
+                            Si bien podría abordarse desde una perspectiva técnica, la inseguridad alimentaria posee una dimensión social profunda, estrechamente relacionada con las lógicas de control impuestas por los sistemas de producción y distribución alimentaria que entorpecen el desarrollo comunitario y social (Kaiser. M, 2011). Estas dinámicas estructurales reproducen prácticas desiguales que, en muchos casos, terminan por arrebatar el derecho a la alimentación, llegando al punto de decidir quién vive y quién muere (Piketty, 2021). Esta lógica de circulación global de alimentos, desprovista de objetivos sociales y ecológicos, se asemeja a una forma de neocolonialismo en beneficio de los más ricos y capaces (Piketty, 2021).
+                        </p>
+                        <img src="Imagenes/UNAL imagen alimentos.jpg" alt="Estadisticas" style="display:block; width:50%; border-radius:10px; margin:2rem auto 0; margin-bottom: 2rem;">
+                        <p>
+                            Explorar las múltiples dimensiones de la inseguridad alimentaria permite desnaturalizar el hambre y la malnutrición. Lejos de ser fenómenos puntuales o inevitables, deben abordarse como el resultado de las decisiones políticas que enmarcan a las personas en esta condición de imposibilidad alimentaria. En este sentido, es fundamental considerar también los efectos subjetivos y emocionales de vivir bajo estas condiciones: la ansiedad, la incertidumbre y la pérdida del derecho a la alimentación (Radimer. K, 1992) que termina por definir y condicionar la cotidianidad y desarrollo de quienes dependen del sistema. Si bien estas experiencias son distintas para todas las personas, realmente convergen en la necesidad de plantear soluciones que permitan apropiarse de la alimentación y aportar al desarrollo individual y colectivo.
+                        </p>
+                        <p>
+                            Hablar de inseguridad alimentaria es una forma de restituir el carácter político de la alimentación, pues comer no es solo una necesidad biológica, sino también una práctica social, cultural y política. Discutir sobre quién decide qué se produce, cómo se distribuye y qué llega a los hogares, es una manera de disputar el sentido del alimento como un derecho, y además como una expresión de autonomía. 
+                        </p>
+
+                        <h3>Distribución regional:</h3>
+                        <p>
+                            La inseguridad alimentaria en Colombia no se manifiesta de manera uniforme. Por el contrario, presenta profundas desigualdades regionales y demográficas que evidencian la persistencia de patrones de exclusión y despojo a lo largo del territorio. En específico se habla sobre las zonas rurales, siendo áreas que muestran cifras más alarmantes y que por el contrario a lo que se podría pensar en cuanto a la producción de alimentos, son las más afectadas por esta problemática. 
+                        </p>
+                        <p>
+                            En 2022, mientras que el 27% de los hogares en zonas urbanas experimentaban inseguridad alimentaria moderada o grave, en las zonas rurales esta media ascendía al 33% (El País, 2023), diferencia que se ha mantenido en los últimos años. Dentro de estas cifras, departamentos como la Guajira, con cerca del 60% en índice de inseguridad alimentaria, Sucre con 47%, Atlántico con 46%, Magdalena 45% y Córdoba con el 40% (DANE, 2022), son la muestra de la prevalencia y profundidad de esta problemática.
+                        </p>
+                        <p>
+                            En la región del pacifico, el Chocó se posicionó con un 43% de inseguridad alimentaria en su modalidad grave para el año 2022, y en el 2024 esta cifra sufrió un aumento llegando al 63% en la misma modalidad (DANE, 2024). Dentro de las razones de este incremento, se encuentran los bloqueos armados, los paros humanitarios, el aislamiento geográfico y la violencia generalizada que impide el acceso a los mercados y servicios básicos (El País, 2024). 
+                        </p>
+                        <p>
+                            Desde otra perspectiva se encuentra la situación de los departamentos que presentan economías basadas en la agricultura, tales como Caldas, Quindío, Risaralda y San Andrés que registraron índices menores al 20%, lo que podría traducirse en mejores condiciones para la producción y acceso a los alimentos. 
+                        </p>
+
+                        <h3>Causas estructurales</h3>
+                        <p>
+                            Más allá de la escasez momentánea o de las fluctuaciones en los precios de los alimentos, el hambre en Colombia está profundamente ligada a factores históricos como el conflicto armado, el despojo de tierras, la pobreza estructural, las transformaciones del modelo productivo rural, el deterioro ambiental y la marginalización territorial.
+                        </p>
+                        <img src="Imagenes/UNAL imagen alimentos.jpg" alt="Estadisticas" style="display:block; width:50%; border-radius:10px; margin:2rem auto 0; margin-bottom: 2rem;">
+                        <p>
+                            Una de las causas más significativas ha sido el conflicto armado interno, que durante décadas ha afectado principalmente a las zonas rurales. Millones de personas han sido desplazadas forzosamente, perdiendo sus tierras, medios de subsistencia y acceso a alimentos. Entre 1980 y 2010, se estima que fueron despojadas o abandonadas por la violencia aproximadamente 6,6 millones de hectáreas de tierra productiva, lo que equivale al 13% del área agropecuaria del país (Comisión de Seguimiento a la Política Pública sobre el Desplazamiento Forzado, 2010). 
+                        </p>
+                        <p>
+                            Aún hoy, el desplazamiento forzado continúa. En 2024, el Comité Internacional de la Cruz Roja alertó que este fue el peor año en términos humanitarios desde la firma del Acuerdo de Paz en 2016, con múltiples confinamientos de comunidades, bloqueos de abastecimiento y nuevas olas de desplazamiento (El País, 2024). Según el Programa Mundial de Alimentos, entre 700.000 y 900.000 personas fueron desplazadas solo entre 2023 y 2024, afectando severamente su acceso a alimentos y seguridad alimentaria (WFP, 2025).
+                        </p>
+                        <p>
+                            Otro factor estructural clave es la pobreza rural, que sigue siendo significativamente más alta que en las zonas urbanas. En 2022, la pobreza monetaria en áreas rurales fue del 36,1%, frente a un 32,3% en cabeceras municipales (DANE, 2022). Esta situación se ve agravada por la concentración de la tierra, la falta de acceso a mercados locales y a servicios básicos, y el deterioro de la infraestructura rural. Como advierte la FAO, Colombia produce suficientes alimentos para todos sus habitantes, pero sigue siendo uno de los países con mayores niveles de desperdicio: cerca de 9,76 millones de toneladas se pierden cada año (FAO, 2022). Eso muestra que el problema no es solo de escasez, sino de cómo se distribuye, se valora y se accede a la comida.
+                        </p>
+                        <p>
+                            La transformación del uso del suelo ha sido otro de los detonantes de esta situación. En zonas rurales afectadas por el conflicto o la marginalidad estatal, la economía ilícita ha reemplazado cultivos tradicionales por cultivos de coca, como mecanismo de subsistencia ante la falta de alternativas legales viables. En departamentos como Nariño, Norte de Santander, Putumayo y Cauca, esta sustitución productiva ha disminuido la oferta local de alimentos y ha encarecido su acceso para las comunidades campesinas (CARE, 2023). Además, la implantación de proyectos extractivos o agroindustriales a gran escala, como la ganadería extensiva o la minería, ha contribuido a reducir el área destinada a cultivos de consumo básico. En muchos casos, estas actividades se han establecido en tierras previamente despojadas o abandonadas forzosamente, alterando las dinámicas locales y desplazando formas tradicionales de producción alimentaria (Gutiérrez-Sanín & Vargas, 2020).
+                        </p>
+
+                        <h3>Respuestas institucionales</h3>
+                        <p>
+                            Hablar de la inseguridad alimentaria en Colombia también implica mirar qué se ha hecho frente a esta problemática, y qué tanto esas respuestas han logrado transformar la vida de quienes la padecen. Desde hace más de una década, el Estado ha propuesto políticas para enfrentar el hambre, como la Política Nacional de Seguridad Alimentaria y Nutricional (PSAN), y ha creado instancias como la Comisión Intersectorial de Seguridad Alimentaria y Nutricional (CISAN). Sin embargo, más allá de los documentos, su implementación ha sido discontinua, fragmentada y, en muchos casos, desconectada de las realidades de las comunidades que más lo necesitan (Departamento Nacional de Planeación, 2016).
+                        </p>
+                        <p>
+                            El Acuerdo de Paz firmado en 2016 intentó ir más allá. En su primer punto, la Reforma Rural Integral, reconoció que sin tierra, sin apoyo al campesinado y sin acceso digno a lo básico, no hay forma de garantizar el derecho a la alimentación. Esta propuesta, pensada para transformar de raíz las condiciones del campo, aún enfrenta enormes obstáculos para materializarse en los territorios (Comisión de Seguimiento a la Implementación del Acuerdo de Paz, 2021).
+                        </p>
+                        <p>
+                            Más recientemente, el programa Hambre Cero, lanzado en 2022, ha buscado actuar sobre los casos más extremos. A través de mercados campesinos, apoyo a huertas comunitarias, transferencias y comedores populares, se ha intentado frenar el avance del hambre en zonas críticas como el Chocó, La Guajira o el Catatumbo. 
+                        </p>
+                    </section>
+                </div>
+            </section>
+
+            <section class="caja">
+                <div class="header">
+                <span class="icono">🌆</span>
+                <h2>Situación en Bogotá</h2>
+                <button class="btn-toggle">Ver más ›</button>
+                </div>
+                <div class="contenido">
+                    <section class="subseccion">
+                        <p>
+                            La inseguridad alimentaria en Bogotá representa un desafío estructural profundamente marcado por las desigualdades sociales de la ciudad y una condición crítica poco visibilizada: su altísima dependencia alimentaria de otras regiones. Como gran centro urbano con escasa producción agrícola propia, Bogotá debe importar más del 98% de los alimentos que consume (Secretaría de Desarrollo Económico, 2023). Esta dependencia convierte a sus más de siete millones de habitantes en una población vulnerable ante cualquier disrupción en las cadenas de abastecimiento, desde paros de transportadores hasta eventos climáticos en zonas rurales proveedoras, con consecuencias directas sobre el acceso a alimentos y la nutrición.
+                        </p>
+                        <h3>Cifras y evolución</h3>
+                        <p>
+                            En los últimos años, Bogotá ha mostrado signos de mejoría frente a los picos de hambre que dejó la pandemia, aunque la inseguridad alimentaria sigue afectando a una proporción significativa de la población. Según la más reciente Encuesta de Calidad de Vida del DANE, en 2024 el 13,9% de los hogares en Bogotá se encontraba en situación de inseguridad alimentaria moderada o severa, una reducción importante respecto al 21,2% registrado en 2023 (El País, 2024). Dentro de este grupo, la inseguridad alimentaria grave, aquella en la que una persona puede pasar hambre o incluso dejar de comer por falta de recursos, bajó de 4,7% a 2,8% en el mismo periodo, lo que significa que cerca de 148.000 bogotanos superaron una situación extrema (Secretaría Distrital de Integración Social, 2024).
+                        </p>
+                        <p>
+                            Este avance contrasta con el estancamiento observado a nivel nacional, donde la proporción de hogares en inseguridad alimentaria apenas disminuyó del 26,1% al 25,5% entre 2023 y 2024 (DANE, 2024). A pesar del progreso en la ciudad, un millón de personas en Bogotá sigue viviendo con inseguridad alimentaria moderada o grave. Es decir, 1 de cada 7 habitantes aún no tiene garantizada su alimentación diaria.
+                        </p>
+                        <h3>Distribución territorial:</h3>
+                        <p>
+                            La inseguridad alimentaria en Bogotá no se distribuye de forma homogénea. Se concentra en mayor medida en las localidades del sur y suroccidente, donde confluyen altos niveles de pobreza, informalidad y exclusión. Localidades como Ciudad Bolívar, Usme, Bosa, Kennedy y San Cristóbal han presentado históricamente los mayores índices de inseguridad alimentaria grave (Desarrollo Económico Bogotá, 2024).
+                        </p>
+                        <img src="Imagenes/UNAL imagen alimentos.jpg" alt="Estadisticas" style="display:block; width:50%; border-radius:10px; margin:2rem auto 0; margin-bottom: 2rem;">
+                    </section>
+                </div>
+                <div class="contenido"></div>
+            </section>
+
+            <section class="hero_section_introducción_conclusión">
+                <div class="hero_texto_conclusión">
+                    <h1></h1>
+                    <p>
+                        La inseguridad alimentaria, es una expresión más de un entramado de desigualdades que atraviesan los cuerpos, los territorios y las formas de habitar. Es una forma de violencia cotidiana que se manifiesta cuando se rompe la posibilidad de alimentarse con libertad, con sentido, con arraigo. No se trata solo de cuántas calorías se consumen, sino de cómo se produce lo que comemos, quién lo controla, qué saberes quedan excluidos y qué posibilidades tienen las personas de decidir sobre algo tan fundamental como su alimentación.
+                    </p>
+                    <p>
+                        Superar la inseguridad alimentaria implica ir más allá de las respuestas técnicas o asistencialistas. Es necesario abrir el horizonte hacia transformaciones profundas que reconozcan y valoren las múltiples formas de producir, cocinar y compartir los alimentos. Es apostar por la recuperación del territorio, por la reactivación de los saberes, por la organización desde abajo. En otras palabras, se trata de devolverle a las comunidades el poder de alimentarse desde sus propias lógicas, en sus propios términos, y con el respeto que merece toda forma de vida que busca sostenerse con dignidad.
+                    </p>
+                    <p>
+                        En el informe global de la FAO, "The State of Food Security and Nutrition in the World" (SOFI, 2022), se aborda la inseguridad alimentaria como un problema multifacético que requiere soluciones integrales. Se enfatiza la necesidad de fortalecer las redes de protección social para garantizar que las comunidades vulnerables tengan acceso a alimentos suficientes, así como la implementación de prácticas agrícolas sostenibles para aumentar la productividad sin comprometer los ecosistemas. Además, se resalta la importancia de la diversificación de cultivos y el empoderamiento de las mujeres rurales como medidas esenciales para mejorar la resiliencia frente a crisis alimentarias.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Bibliografía -->
+            <section class="caja">
+                <div class="header">
+                <span class="icono">📝</span>
+                <h2>Bibliografía</h2>
+                <button class="btn-toggle">Ver más ›</button>
+                </div>
+                <div class="contenido">
+                <!-- tu contenido de Bibliografía intacto -->
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+  
+        <!-- Apartado JS para devolver las tarjetas a su estado frontal -->
+        <script>
+            window.addEventListener('scroll', () => {
+            document.querySelectorAll('.card.flipped').forEach(card => {
+                card.classList.remove('flipped');
+            });
+            });
+        </script>
+
+        <!-- Ocultar/mostrar header al hacer scroll -->
+        <script>
+            let lastScrollTop = 0;
+            const headerEl = document.querySelector("header");
+            const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
+
+            window.addEventListener("scroll", () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                headerEl.classList.add("header-hidden");
+            } else {
+                headerEl.classList.remove("header-hidden");
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+            });
+
+            navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                headerEl.classList.add("header-hidden");
+            });
+            });
+        </script>
+
+        <!-- Smooth scroll para inputs con onclick="location.href" -->
+        <script>
+            document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
+                const target = document.getElementById(targetId);
+                const offset = 100;
+                window.scrollTo({
+                top: target.offsetTop - offset,
+                behavior: 'smooth'
+                });
+            });
+            });
+        </script>
+
+        <!-- Quitar hash y scroll to top al recargar con # -->
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash) {
+                history.replaceState(null, null, window.location.pathname);
+                window.scrollTo(0, 0);
+            }
+            });
+        </script>
+
+        <!-- Apertura/cierre simple (max-height) para .caja_acordeon -->
+        <script>
+            document.querySelectorAll('.caja_acordeon').forEach(caja => {
+            const encabezado = caja.querySelector('.encabezado');
+            const contenido  = caja.querySelector('.contenido');
+            encabezado.addEventListener('click', () => {
+                const abierto = contenido.style.maxHeight && contenido.style.maxHeight !== "0px";
+                contenido.style.maxHeight = abierto ? null : contenido.scrollHeight + "px";
+            });
+            });
+        </script>
+
+        <!-- Acordeón que cierra los demás al abrir uno -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            const acordeones = document.querySelectorAll(".caja_acordeon, .caja_acordeon_footer");
+            acordeones.forEach(acordeon => {
+                const encabezado = acordeon.querySelector(".encabezado, .encabezado_footer");
+                const icono = encabezado.querySelector(".icono");
+                const cerrarBtn = acordeon.querySelector(".cerrar_btn");
+                encabezado.addEventListener("click", () => {
+                const yaActivo = acordeon.classList.contains("activa");
+                acordeones.forEach(item => {
+                    item.classList.remove("activa");
+                    const icon = item.querySelector(".icono");
+                    if (icon) icon.textContent = "+";
+                });
+                if (!yaActivo) {
+                    acordeon.classList.add("activa");
+                    if (icono) icono.textContent = "−";
+                }
+                });
+                if (cerrarBtn) {
+                cerrarBtn.addEventListener('click', e => {
+                    e.stopPropagation();
+                    acordeon.classList.remove("activa");
+                    if (icono) icono.textContent = "+";
+                });
+                }
+            });
+            });
+        </script>
+
+        <!-- Script de la galería -->
+        <script>
+            let posicion = 0;
+            function moverGaleria(direccion) {
+            const galeria = document.getElementById("galeria");
+            const tarjetas = galeria.querySelectorAll(".flip-card");
+            if (!tarjetas.length) return;
+            const tarjeta = tarjetas[0];
+            const estilo = window.getComputedStyle(tarjeta);
+            const ancho = tarjeta.offsetWidth + parseInt(estilo.marginRight || 0);
+            const visible = 2;
+            const total = tarjetas.length;
+            const maxPos = total - visible;
+            posicion += direccion;
+            if (posicion < 0) posicion = 0;
+            if (posicion > maxPos) posicion = maxPos;
+            galeria.style.transform = `translateX(-${posicion * ancho}px)`;
+            }
+        </script>
+
+        <!-- Script genérico para elementos .caja -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.caja').forEach(caja => {
+                const header = caja.querySelector('.header');
+                const btnCerrar = caja.querySelector('.btn-cerrar');
+                if (header) header.addEventListener('click', () => caja.classList.toggle('open'));
+                if (btnCerrar) btnCerrar.addEventListener('click', e => {
+                e.stopPropagation();
+                caja.classList.remove('open');
+                });
+            });
+            });
+        </script>
+
+        <!-- Nuevo script: cambia texto del botón según estado -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.caja .btn-toggle').forEach(btn => {
+                const caja = btn.closest('.caja');
+                const contenido = caja.querySelector('.contenido');
+                // ocultar contenido por defecto
+                contenido.style.display = 'none';
+                btn.addEventListener('click', () => {
+                const abierta = caja.classList.toggle('activa');
+                if (abierta) {
+                    contenido.style.display = 'block';
+                    btn.textContent = 'Cerrar sección';
+                } else {
+                    contenido.style.display = 'none';
+                    btn.textContent = 'Ver más ›';
+                }
+                });
+            });
+            });
+        </script>
+
+    </body>
+
+</html>
+
+
+
+        <!--GALERIA
+
+        <div class="galeria-wrapper">
+            <button class="galeria-btn izquierda" onclick="moverGaleria(-1)">&#10094;</button>
+          
+                <div class="galeria-container">
+                    <div class="galeria" id="galeria">
+                    
+                        <div class="flip-card">
+                            <div class="flip-inner">
+                                <div class="flip-front">
+                                    <img src="Imagenes/imagen Hambre 1.png" alt="Imagen 1">
+                                </div>
+                                <div class="flip-back">
+                                    <h1>Tomada de:</h1>
+                                    <a href="https://www.elespectador.com/bogota/opinion-hambre-una-amenaza-silenciosa-en-bogota/" target="_blank">
+                                        Rojas, R. (2022). Opinión: Hambre silenciosa en Bogotá. ELESPECTADOR.COM
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="flip-card">
+                            <div class="flip-inner">
+                                <div class="flip-front">
+                                    <img src="Imagenes/imagen hambre 2.jpeg" alt="Imagen 2">
+                                </div>
+                                <div class="flip-back">
+                                    <h1>Tomada de:</h1>
+                                    <a href="https://www.eltiempo.com/bogota/opinion-bogota-con-hambre-825509" target="_blank">
+                                        Oróstegui, Ó. (2013). Opinión: Bogotá con Hambre. El Tiempo.
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card">
+                            <div class="flip-inner">
+                                <div class="flip-front">
+                                    <img src="Imagenes/imagen hambre 3.png" alt="Imagen 2">
+                                </div>
+                                <div class="flip-back">
+                                    <h1>Tomada de:</h1>
+                                    <a href="https://canal1.com.co/noticias/nacional/mas-de-2-600-000-personas-aguantan-hambre-en-colombia-la-guajira-y-sucre-los-departamentos-mas-criticos/" target="_blank">
+                                        Giraldo, D. (2023). Más de 2.600.000 personas aguantan hambre en Colombia: La Guajira y Sucre, los departamentos más críticos. Canal 1. 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card">
+                            <div class="flip-inner">
+                                <div class="flip-front">
+                                    <img src="Imagenes/imagen hambre 5.jpg" alt="Imagen 2">
+                                </div>
+                                <div class="flip-back">
+                                    <h1>Tomada de:</h1>
+                                    <a href="https://notiweb.co/54-de-colombianos-pasa-hambre-y-540-000-ninos-son-desnutridos-cronicos/" target="_blank">
+                                        NotiWeb. (2021). 54% de colombianos pasa hambre y 540.000 niños son desnutridos crónicos.  
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+          
+            <button class="galeria-btn derecha" onclick="moverGaleria(1)">&#10095;</button>
+        </div>
+
+        <div class="container_introducción_inseguridad_alimentaria">
+        <section id="ciudad" class="subseccion_soberanía_discusión">
+            <h3>¿Qué es la inseguridad alimentaria?</h3>
+            <p>
+                La inseguridad alimentaria se refiere a la situación en que las personas u hogares no tienen acceso físico, económico y social permanente a alimentos suficientes, nutritivos y culturalmente aceptables para llevar una vida saludable y activa (FAO, 2011). Este fenómeno no se limita simplemente a la escasez de comida, sino que emerge de desigualdades estructurales, tales como la pobreza, la crisis climática y los conflictos, que restringen quién puede producir, distribuir y consumir alimentos de calidad (FAO, 2022).
+            </p>
+
+            <div class="flip_container" onclick="this.classList.toggle('flip_active')">
+                <div class="flip_inner">
+                    <!- Frente --
+                    <div class="flip_front">
+                        <img src="Imagenes/UNICEF. State of FSN.jpg" alt="Foto" class="foto_despojo_prueba">
+                    </div>
+                    <! Reverso con referencia --
+                    <div class="flip_back">
+                        <h1>Referencia</h1>
+                        <a href="https://periodico.unal.edu.co/articulos/falta-de-acceso-a-alimentos-tradicionales-pone-en-riesgo-la-seguridad-alimentaria-de-comunidades-indigenas-en-leticia" target="_blank">
+                            https://periodico.unal.edu.co/articulos/falta-de-acceso-a-alimentos-tradicionales-pone-en-riesgo-la-seguridad-alimentaria-de-comunidades-indigenas-en-leticia
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Según Nagothu (2014), afrontar la inseguridad alimentaria exige políticas sensibles a las realidades locales, que impulsen avances tecnológicos en el agro y fortalezcan la infraestructura de almacenamiento y transporte para llevar los alimentos a las regiones más remotas. Lappé y Collins (2015) subrayan que el hambre rara vez obedece a un déficit global de producción, sino más bien a una distribución desigual de los recursos, por lo que proponen transitar hacia sistemas agroecológicos que devuelvan el protagonismo a los pequeños agricultores. En Colombia, García Trujillo (2017) complementa este enfoque impulsando la soberanía alimentaria: comunidades que recuperan el control de sus territorios y cultivan sus propias huertas urbanas logran reducir la dependencia de los mercados globales y fortalecen su resiliencia ante crisis económicas y sociales.
+            </p>
+        </section>
+        </div>
+
+        -->

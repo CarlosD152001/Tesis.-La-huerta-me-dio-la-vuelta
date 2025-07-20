@@ -1,0 +1,786 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --espaciado-lateral: 10px; /* define un espacio único y coherente */
+    --bg-page: #030301;
+    --bg-box: #F9FCF8;
+    --bg-header: #6d746c;
+    --bg-header-hover: #466040;
+    --border: #243D1D;
+    --text: #243D1D;
+    --radius: 8px;
+    --transition: 0.3s ease;
+    --content-max-h: 350px;
+    --max-container: 1200px;
+    --box-min-width: 300px;
+    --font-min: 1rem;     /* 16px */
+    --font-max: 1.2rem;   /* 19.2px */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background: #DEE2B0;
+    /*background: #e1ddd2;*/
+    font-family: 'Libertinus Math', serif;
+    font-size: clamp(var(--font-min), 1.5vw, var(--font-max));
+}
+
+header {
+    position: fixed;
+    top: 10px;
+    left: var(--espaciado-lateral);
+    right: var(--espaciado-lateral);
+    background: #243D1D;
+    /*background-color: #e6efe4;*/
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08); /* sombra ligera */
+    padding: 20px 40px; /* más padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-radius: 10px;
+    border: 1px solid #243D1D;
+}
+
+.header-hidden {
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-size: 2.6rem; /* más grande */
+    font-weight: bold;
+    color: #B4B56D;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+    text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+     1px 1px 0 #000000;
+}
+  
+.nav_list {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* más separación */
+    margin: 0 auto;      /* centra el contenedor automáticamente */
+    padding: 0;
+    justify-content: center; /* centra las opciones horizontalmente */
+    align-items: center;     /* centra verticalmente si hay altura definida */
+}
+
+.nav_opción {
+    font-size: 1.1rem; /* más grande */
+    color: #456340;
+    background-color: #f9fcf8;
+    padding: 14px 22px; /* más padding */
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nav_opción:hover {
+    background-color: #dbe7d4;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transform: scale(1.05); /* efecto más visible */
+}
+.icono_inicio {
+    width: 34px; /* más grande */
+    height: 34px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%); /* color negro para la flecha */
+}
+  
+.icono_inicio:hover {
+    transform: scale(1.15); /* efecto mayor */
+}
+
+#menú_bar {
+    display: none;
+}
+
+header label {
+    font-size: 1.4rem; /* más grande */
+    color: #3c5239;
+    cursor: pointer;
+    display: none;
+    padding: 0.8rem 1.2rem;
+    background: #e6efe4;
+    border: 1px solid #a2b89a;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+header label:hover {
+    background: #dbe7d4;
+}
+
+/*INICIO BANNER*/
+.hero_section_discusión {
+    background: url('Imagenes/entrada\ huerta\ 2.jpeg') center/cover no-repeat;
+    margin-top: 7rem;
+    margin-left: 90px;
+    margin-right: 90px;
+    background-color: #e6efe4; /* verde grisáceo muy suave */
+    border: 2px solid #000000;
+    padding: 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); /* sombra ligera */
+    border-radius: 0; /* rectangular */
+}
+
+.seccion-titulo {
+    text-align: center;
+    min-height: 1vh;
+    border: 3px solid #164117;
+    margin: 4rem auto 2rem auto;
+    margin-top: 4rem;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    border-left: 3px solid #103111;
+    border-right: 3px solid #103111;
+    max-width: 1100px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.seccion-titulo h2 {
+    margin: 0;
+    font-family: 'Libertinus Math', serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: #000000;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.seccion-titulo h2::after {
+  content: "";
+  display: block;
+  margin: 0.5rem auto 0;
+  width: 90px;
+  height: 2px;
+  background-color: #103111;
+  opacity: 0.7;
+}
+/*FINAL BANNER*/
+
+/*INICIO CARRUSEL*/
+.container_carrusel_Santa {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: 6.3rem;
+    margin-right: 6.3rem;
+}
+
+.storytelling-carrusel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 0.4rem; /* menos redondeado */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 700px;
+    background-color: transparent;
+}
+
+.storytelling-carrusel .slide {
+    display: none;
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+
+.storytelling-carrusel .slide.active {
+  display: block;
+}
+
+.storytelling-carrusel img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-bottom: 1px solid #e0dcd4;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+}
+
+.storytelling-carrusel p {
+  height: 20%;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  font-style: italic;
+  font-size: 1.3rem;
+  font-family: 'Libertinus Math', 'Georgia', serif;
+  color: #000000;
+  line-height: 1.4;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.storytelling-carrusel button.prev,
+.storytelling-carrusel button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 50%;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.storytelling-carrusel button.prev {
+  left: 5px;
+}
+
+.storytelling-carrusel button.next {
+  right: 5px;
+}
+
+.storytelling-carrusel button.prev:hover,
+.storytelling-carrusel button.next:hover {
+  background: #f0f0f0;
+  transform: translateY(-50%) scale(1.05);
+}
+/*FINAL CARRUSEL*/
+
+/*INICIO PERFIL*/
+.perfil_maria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 4rem;
+  margin-left: 6.3rem;
+  margin-right: 6.3rem;
+}
+
+.foto_maria {
+  flex: 0 0 40%; /* 50% del ancho */
+  display: flex;
+  justify-content: center;
+}
+
+.foto_maria2 {
+  flex: 0 0 40%; /* 50% del ancho */
+  display: flex;
+  justify-content: center;
+}
+
+.foto_maria img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.galeria_maria {
+  display: flex;
+  gap: 1rem; /* Espacio entre imágenes */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: flex-start; /* Alinea arriba */
+  flex-wrap: wrap; /* Para que se acomoden bien en pantallas pequeñas */
+}
+
+.foto_maria2 img {
+  width: 100%;
+  max-width: 400px; /* o el tamaño que quieras */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.descripcion_maria {
+  flex: 0 0 60%; /* 50% del ancho */
+  text-align: left;
+}
+
+.descripcion_maria h2 {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+.descripcion_maria h3 {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  color: #000000;
+  text-align: justify;
+}
+
+.descripcion_maria p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #000000;
+  text-align: justify;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.acordeon_maria {
+  margin: 2rem auto;
+  margin-top: -3.7rem;
+  margin-left: 6.3rem;
+  margin-right: 6.3rem;
+  background: #bfc7b8;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: 'Georgia', serif;
+}
+
+.acordeon_titulo {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #243D1D;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.acordeon_contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  background-color: #fff;
+  padding: 0 1.5rem; /* Solo lateral al inicio */
+}
+
+.acordeon_contenido.abierto {
+  padding: 1.5rem; /* Se agrega al abrir */
+}
+
+.acordeon_contenido p {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    line-height: 2.1;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #000000;
+}
+
+.acordeon_cerrar {
+  margin: 1rem auto 1.5rem;
+  display: block;
+  background-color: #f0f0e9;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.acordeon_cerrar:hover {
+  background-color: #e5e5da;
+}
+/*FINAL PERFIL*/
+
+/*Inicio apartado de cartas discusión*/
+
+.texto_titulo_tarjetas1 {
+    background: rgb(255, 255, 255);
+    border-radius: 0;
+    padding: 2rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #000;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    margin: 4rem 70px 2rem;
+    margin-left: 6.3rem;
+    margin-right: 6.3rem;
+}
+
+.texto_titulo_tarjetas1 p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #000;
+    margin-left: 4.3rem;
+    margin-right: 4.3rem;
+}
+
+.texto_titulo_tarjetas1 h4 {
+    margin-top: 2rem;
+    text-decoration: underline;
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+}
+
+.cards_container_discusión {
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+  flex-wrap: wrap;
+  margin: 1rem auto;               
+  padding: 2.5rem 1rem;
+  padding-top: 0.5rem;             
+  width: 86%;                     
+  max-width: 1400px;               
+  box-sizing: border-box;         
+  background-color: #f0f3f3;
+  border-radius: 0;
+}
+  
+.card_discusión {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+  
+.card_inner_discusión {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+  
+.card_discusión.flipped .card_inner_discusión {
+    transform: rotateY(180deg);
+}
+  
+.card_front_discusión, .card_back_discusión {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+  
+.card_front_discusión {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+}
+  
+.card_concepto_discusión {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+}
+  
+.card_back_discusión {
+    background: #e4f0e0;
+    color: #1e3d1e;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    gap: 1.5rem;
+}
+  
+.card_back_discusión input[type="button"] {
+    background-color: #4a8f4f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+  
+.card_back_discusión input[type="button"]:hover {
+    background-color: #326b37;
+}
+/*Final apartado cartas discusión*/
+
+
+
+
+
+/*INICIO BIBLIOGRAFÍA*/
+.caja {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-box);
+    overflow: hidden;
+    transition: box-shadow var(--transition);
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+}
+.caja:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 2rem;
+    background: #2b570f;
+    color: #B4B56D;
+    text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+     1px 1px 0 #000000;
+    cursor: pointer;
+    transition: background var(--transition);
+    text-transform: uppercase;
+}
+
+.subseccion p{
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: #000000;
+}
+
+.subseccion h3{
+    color: #39692c;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-decoration: underline;
+}
+
+.header:hover {
+    background: #88af8a;
+}
+
+.header h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.header .icono img {
+    width: 32px; height: 32px;
+}
+
+.btn-toggle {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    transition: background var(--transition), color var(--transition);
+}
+
+.header:hover .btn-toggle {
+    background: #fff;
+    color: var(--bg-header);
+}
+/*FINAL BIBLIOGRAFÍA*/
+
+
+/*INICIO CARTOGRAFÍA*/
+.huerta-interactiva {
+  position: relative;
+  max-width: 960px;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.imagen-huerta {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.emoji-punto {
+  position: absolute;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.emoji-punto:hover {
+  transform: scale(1.3);
+}
+
+/* Ventana emergente */
+.modal-huerta {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.6rem;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+/*FINAL CARTOGRAFÍA*/
+
+/*INICIO SECCIÓN VIDEOS*/
+.seccion_videos {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  margin-left: 6.3rem;
+  margin-right: 6.3rem;
+}
+
+.seccion_videos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+
+.descripcion_videos {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #000000;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.galeria_videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.video_item {
+  background: #f0f3f3;
+  padding: 1rem;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.video_item video {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  border-radius: 12px;
+  background-color: #000;
+}
+
+.video_item iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.5rem;
+}
+
+.video_item p {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #000000;
+}
+/*FINAL SECCIÓN VIDEOS*/
+
+/*INICIO SEMILLA*/
+.cita-modulo {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #000000;
+    max-width: 700px;
+    margin: 8rem auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 1px solid black;
+}
+.cita-modulo small {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #000000;
+}

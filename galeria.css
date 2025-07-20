@@ -1,0 +1,123 @@
+
+
+
+
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;   /* ya se ajusta al tamaño de .container_carrusel */
+    height: 100vh;
+    margin: 1vh 0;
+}
+
+.texto_carrusel{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #a6b3a3;
+    margin-top: 1rem;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    border-radius: 15px;
+}
+
+.img{
+    box-shadow: 0px 4px 10px 0px black;
+    height: 576px;
+    width: 1000px;
+    border-radius: 15px;
+    margin: 5px;
+    object-fit: cover;
+    filter: saturate(175%);
+}
+
+.texto{
+    overflow: hidden;
+    position: absolute;
+    flex-direction: column;
+    transform: translateY(0px);
+    margin-bottom: 100px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(63,106,138,0.71);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.texto h3{
+    text-shadow: 0px 0px 15px black;
+    padding-top: 40px;
+    color: white;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.texto p{
+    align-items: center;
+    padding: 20px;
+    color: white;
+    font-size: 0px;
+    font-weight: 300;
+}
+
+.imagenes .texto{
+    width: 600px;
+    height: 100px;
+    transition: 1s;
+}
+
+.imagenes:hover .texto{
+    transition: height 1s, transform 1s background-color 1s;
+    transform: translateY(-150px);
+    height: 300px;
+    background-color: rgba(63,106,138,0.71);
+}
+
+.imagenes:hover .texto p{
+    transition: font-size 0s .2s linear;
+    font-size: 23px;
+    font-weight: 300;
+    text-shadow: 0px 0px 10px black;
+}
+
+.puntos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.puntos p{
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: -50px;
+    color: #000000;
+}
+
+.puntos .bold{
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #c93c3c;
+}
+
+.carrusel .atras img,
+.carrusel .adelante img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover: agranda, aclara y añade sombra */
+.carrusel .atras img:hover,
+.carrusel .adelante img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.3) drop-shadow(0 0 8px rgba(0, 0, 0, 0.5));
+}

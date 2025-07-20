@@ -1,0 +1,281 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --espaciado-lateral: 10px; /* define un espacio único y coherente */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background: #DEE2B0;
+    /*background: #e1ddd2;*/
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    position: fixed;
+    top: 5px;
+    left: var(--espaciado-lateral);
+    right: var(--espaciado-lateral);
+    background: #243D1D;
+    /*background-color: #e6efe4;*/
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08); /* sombra ligera */
+    padding: 20px 40px; /* más padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-radius: 12px;
+    border: 2px solid #000000;
+}
+
+.header-hidden {
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-size: 2.6rem; /* más grande */
+    font-weight: bold;
+    color: #B4B56D;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+    text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+     1px 1px 0 #000000;
+}
+  
+.nav_list {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* más separación */
+    margin: 0 auto;      /* centra el contenedor automáticamente */
+    padding: 0;
+    justify-content: center; /* centra las opciones horizontalmente */
+    align-items: center;     /* centra verticalmente si hay altura definida */
+}
+
+.nav_opción {
+    font-size: 1.1rem; /* más grande */
+    color: #456340;
+    background-color: #f9fcf8;
+    padding: 14px 22px; /* más padding */
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nav_opción:hover {
+    background-color: #dbe7d4;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transform: scale(1.05); /* efecto más visible */
+}
+.icono_inicio {
+    width: 34px; /* más grande */
+    height: 34px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%); /* color negro para la flecha */
+}
+  
+.icono_inicio:hover {
+    transform: scale(1.15); /* efecto mayor */
+}
+
+#menú_bar {
+    display: none;
+}
+
+header label {
+    font-size: 1.4rem; /* más grande */
+    color: #3c5239;
+    cursor: pointer;
+    display: none;
+    padding: 0.8rem 1.2rem;
+    background: #e6efe4;
+    border: 1px solid #a2b89a;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+header label:hover {
+    background: #dbe7d4;
+}
+
+/* Inicio Sección Hero inicio*/
+.hero_section1_inicio {
+    margin: 100px 70px 50px;
+    border-radius: 12px;
+    position: relative;
+    border: 2px solid #000;      /* cuadro exterior */
+    background: url(Imagenes/canasta.png) center/cover no-repeat;
+    padding: 14rem 3rem;           /* espacio interior para que no choque con el cuadro interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh; 
+}
+
+.hero_section1_inicio::after {
+    content: "";
+    position: absolute;
+    inset: 4rem 2rem;             /* mismo valor de padding: top/bottom 4rem, left/right 2rem */
+    border: 2px solid #000;       /* cuadro interno */
+    pointer-events: none;         /* para que no interfiera con el botón o texto */
+}
+
+.hero_section1_inicio .container_hero {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.hero_section2_inicio {
+    margin: 100px 70px 50px;
+    border-radius: 12px;
+    position: relative;
+    border: 2px solid #000;      /* cuadro exterior */
+    background: url(/Imagenes/urban_scene_cartoon.jpg) center/cover no-repeat;
+    padding: 14rem 2rem;           /* espacio interior para que no choque con el cuadro interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh; 
+}
+
+.hero_section2_inicio::after {
+    content: "";
+    position: absolute;
+    inset: 4rem 2rem;             /* mismo valor de padding: top/bottom 4rem, left/right 2rem */
+    border: 2px solid #000;       /* cuadro interno */
+    pointer-events: none;         /* para que no interfiera con el botón o texto */
+}
+
+.hero_section2_inicio .container_hero {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.hero_section3_inicio {
+    margin: 100px 70px 50px;
+    border-radius: 12px;
+    position: relative;
+    border: 2px solid #000;      /* cuadro exterior */
+    background: url(/Imagenes/Santa\ elena\ foto\ index.png) center/cover no-repeat;
+    padding: 14rem 2rem;           /* espacio interior para que no choque con el cuadro interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh; 
+}
+
+.hero_section3_inicio::after {
+    content: "";
+    position: absolute;
+    inset: 4rem 2rem;             /* mismo valor de padding: top/bottom 4rem, left/right 2rem */
+    border: 2px solid #000;       /* cuadro interno */
+    pointer-events: none;         /* para que no interfiera con el botón o texto */
+}
+
+.hero_section3_inicio .container_hero {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.hero_section4_inicio {
+    margin: 100px 70px 50px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    position: relative;
+    border: 2px solid #000;      /* cuadro exterior */
+    background: url(/Imagenes/imagen\ conclusion.png) center/cover no-repeat;
+    padding: 14rem 2rem;           /* espacio interior para que no choque con el cuadro interno */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 70vh; 
+}
+
+.hero_section4_inicio::after {
+    content: "";
+    position: absolute;
+    inset: 4rem 2rem;             /* mismo valor de padding: top/bottom 4rem, left/right 2rem */
+    border: 2px solid #000;       /* cuadro interno */
+    pointer-events: none;         /* para que no interfiera con el botón o texto */
+}
+
+.hero_section4_inicio .container_hero {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.hero_title_inicio {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #a7a7a7;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+    max-width: 100%;
+    text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+     1px 1px 0 #000000;
+}
+
+.boton_secciones_inicio {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #8db9ce;
+    color: #000000;
+    border: 1px solid #000; 
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+.boton_secciones_inicio:hover {
+    background-color: #85e753;
+    transform: scale(1.05);
+    color: #000000;
+}
+/*Final Sección Hero inicio*/

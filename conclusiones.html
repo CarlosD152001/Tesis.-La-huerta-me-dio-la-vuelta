@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reflexiones</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Introducción</a>
+    
+    <input type="checkbox" id="menú_bar">
+    <label for="menú_bar">Menú</label>
+    
+    <nav class="nav_bar">
+      <ul class="nav_list">
+        <li class="nav_element nav_element_inicio">
+          <a href="index.html" class="nav_opción">
+            <img src="Imagenes/inicio.svg" alt="Inicio" class="icono_inicio">
+          </a>
+        </li>
+        <li class="nav_element">
+          <a href="#soberanía_alimentaria" class="nav_opción">Contexto</a>
+        </li>
+        <li class="nav_element">
+          <a href="#urbanización" class="nav_opción">Objetivos</a>
+        </li>
+        <li class="nav_element">
+          <a href="#urbanización" class="nav_opción">Justificación</a>
+        </li>
+        <li class="nav_element">
+          <a href="#urbanización" class="nav_opción">Sobre la página</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <section class="hero_section_introducción">
+    <div class="hero_texto">
+      <h1>Título de la sección</h1>
+      <p>Un mensaje claro que contraste con la imagen</p>
+    </div>
+  </section>
+
+
+  <main>
+    <section>
+      <p>La historia de Helena nos invita a reflexionar sobre cómo habitamos la ciudad, el valor de la tierra y la necesidad de defender nuestros territorios de vida. Esta huerta es testimonio de resistencia, transformación y dignidad.</p>
+    </section>
+  </main>
+
+<!-- Apartado JS para devolver las trajetas a su estado frontal -->
+  <script> 
+    window.addEventListener('scroll', () => {
+      const flippedCards = document.querySelectorAll('.card.flipped');
+      flippedCards.forEach(card => {
+        card.classList.remove('flipped');
+      });
+    });
+  </script>
+
+  <script>
+    let lastScrollTop = 0;
+    const header = document.querySelector("header");
+    const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
+
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop) {
+            // Scroll hacia abajo: ocultar header
+            header.classList.add("header-hidden");
+        } else {
+            // Scroll hacia arriba: mostrar header
+            header.classList.remove("header-hidden");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+
+    // Ocultar menú cuando se hace clic en una opción
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            header.classList.add("header-hidden");
+        });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
+        const target = document.getElementById(targetId);
+        const offset = 100; // Altura del header
+
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash) {
+        history.replaceState(null, null, window.location.pathname);
+        window.scrollTo(0, 0);
+      }
+    });
+  </script>
+
+
+
+</body>
+</html>

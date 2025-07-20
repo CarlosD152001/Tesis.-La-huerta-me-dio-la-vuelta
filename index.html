@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrusel de Banners</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="carrusel_contenedor">
+
+        <div class="slides">
+
+            <div class="slide banner1">
+                <div class="contenido_banner1">
+                    <h1>La Huerta Me Dio La Vuelta</h1>
+                    <a href="inicio.html" class="boton_banner">Ir al proyecto</a>
+                </div>
+            </div>
+
+            <div class="slide banner2">
+                <div class="contenido_banner2">
+                <h2>Especificaciones</h2>
+                    <div class="opciones">
+                        <a onclick="abrirModal('pregunta')" class="opcion">Pregunta de investigación</a>
+                        <a onclick="abrirModal('objetivos')" class="opcion">Objetivos</a>
+                        <a onclick="abrirModal('justificacion')" class="opcion">Justificación</a>
+                        <a onclick="abrirModal('detalles')" class="opcion">Detalles</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button id="flechaIzquierda" class="flecha izquierda" onclick="cambiarSlide(-1)">&#10094;</button>
+        <button id="flechaDerecha" class="flecha derecha" onclick="cambiarSlide(1)">&#10095;</button>
+
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal_contenido">
+            <span class="cerrar" onclick="cerrarModal()">&times;</span>
+            <div id="modal_texto"></div>
+        </div>
+    </div>
+
+    <script>
+        let indice = 0;
+        const slides = document.querySelectorAll(".slide");
+        const flechaIzquierda = document.getElementById("flechaIzquierda");
+        const flechaDerecha = document.getElementById("flechaDerecha");
+
+        function mostrarSlide(nuevoIndice) {
+            slides.forEach((slide, i) => {
+            slide.style.display = i === nuevoIndice ? "flex" : "none";
+            });
+
+            flechaIzquierda.style.display = nuevoIndice === 0 ? "none" : "block";
+            flechaDerecha.style.display = nuevoIndice === slides.length - 1 ? "none" : "block";
+        }
+
+        function cambiarSlide(direccion) {
+            indice = (indice + direccion + slides.length) % slides.length;
+            mostrarSlide(indice);
+        }
+
+        window.onload = () => mostrarSlide(indice);
+    </script>
+
+    <script>
+        const contenidoModal = {
+            "pregunta": "<h3>Pregunta de investigación</h3><p>¿Cómo se materializan, y qué límites enfrentan, las principales dimensiones de la soberanía alimentaria en la práctica cotidiana de la Huerta Santa Elena frente a las transformaciones del desarrollo urbano?</p>",
+            "objetivos": "<h3>Objetivos</h3><ul><li>Explorar cómo se encarnan las dimensiones centrales de la soberanía alimentaria.</li><li>Describir procesos cotidianos de cultivo.</li><li>Sistematizar los aprendizajes desde la voz de María Elena.</li><li>Visibilizar las formas materiales de transformación del espacio.</li></ul>",
+            "justificacion": "<h3>Justificación</h3><p>Este proyecto busca entender la soberanía alimentaria desde una experiencia situada en Bogotá, visibilizando prácticas que resisten a la lógica del desarrollo urbano.</p>",
+            "detalles": "<h3>Detalles</h3><p>El estudio se basa en trabajo de campo en la Huerta Santa Elena, entrevistas y análisis antropológico crítico sobre ciudad, alimento y vida cotidiana.</p>"
+        };
+
+        function abrirModal(tipo) {
+            document.getElementById("modal_texto").innerHTML = contenidoModal[tipo];
+            document.getElementById("modal").style.display = "block";
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        // Cerrar modal al hacer clic fuera
+        window.onclick = function(event) {
+            const modal = document.getElementById("modal");
+            if (event.target === modal) {
+            cerrarModal();
+            }
+        };
+    </script>
+
+</body>
+</html>

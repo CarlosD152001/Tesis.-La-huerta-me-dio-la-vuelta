@@ -1,0 +1,1763 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --espaciado-lateral: 10px; /* define un espacio único y coherente */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background: #DEE2B0;
+    /*background: #e1ddd2;*/
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    position: fixed;
+    top: 15px;
+    left: var(--espaciado-lateral);
+    right: var(--espaciado-lateral);
+    background: #243D1D;
+    /*background-color: #e6efe4;*/
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08); /* sombra ligera */
+    padding: 20px 40px; /* más padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-radius: 10px;
+    border: 1px solid #243D1D;
+}
+
+.header-hidden {
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+}
+
+.logo {
+    font-size: 2.6rem; /* más grande */
+    font-weight: bold;
+    color: #B4B56D;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+    text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+     1px 1px 0 #000000;
+}
+  
+.nav_list {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* más separación */
+    margin: 0 auto;      /* centra el contenedor automáticamente */
+    padding: 0;
+    justify-content: center; /* centra las opciones horizontalmente */
+    align-items: center;     /* centra verticalmente si hay altura definida */
+}
+
+.nav_opción {
+    font-size: 1.1rem; /* más grande */
+    color: #456340;
+    background-color: #f9fcf8;
+    padding: 14px 22px; /* más padding */
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.nav_opción:hover {
+    background-color: #dbe7d4;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transform: scale(1.05); /* efecto más visible */
+}
+.icono_inicio {
+    width: 34px; /* más grande */
+    height: 34px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 10px;
+    filter: brightness(0) saturate(100%); /* color negro para la flecha */
+}
+  
+.icono_inicio:hover {
+    transform: scale(1.15); /* efecto mayor */
+}
+
+#menú_bar {
+    display: none;
+}
+
+header label {
+    font-size: 1.4rem; /* más grande */
+    color: #3c5239;
+    cursor: pointer;
+    display: none;
+    padding: 0.8rem 1.2rem;
+    background: #e6efe4;
+    border: 1px solid #a2b89a;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+header label:hover {
+    background: #dbe7d4;
+}
+
+/*Inicio apartado del hero del index*/
+.boton_secciones {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #8ec3db;
+    color: #000000;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+.boton_secciones:hover {
+    background-color: #557c42;
+    transform: scale(1.05);
+    color: #000000;
+}
+
+.hero_section1 {
+    margin-top: 130px; /* espacio entre header y hero */
+    margin-left: 10px;
+    margin-right: 10px;
+    background: url(/Imagenes/foto\ introducción.png) center/cover no-repeat;
+    padding: 2rem;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #000000;
+    outline: 3px solid #000000;
+    outline-offset: -90px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0;  
+}
+
+.hero_section2 {
+    margin: 10px 10px; /* Esto alineado con el header */
+    margin-top: 80px; /* espacio entre header y hero */
+    margin-bottom: 90px;
+    background: url(/Imagenes/urban_scene_cartoon.jpg) center/cover no-repeat;
+    padding: 2rem;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #000000;
+    outline: 3px solid #000000;
+    outline-offset: -90px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+}
+
+.hero_section3 {
+    margin: 10px 10px; /* Esto alineado con el header */
+    margin-top: 80px; /* espacio entre header y hero */
+    margin-bottom: 90px;
+    background: url(/Imagenes/Santa\ elena\ foto\ index.png) center/cover no-repeat;
+    padding: 2rem;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #000000;
+    outline: 3px solid #000000;
+    outline-offset: -90px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+}
+
+.hero_section4 {
+    margin: 10px 10px; /* Esto alineado con el header */
+    margin-top: 80px; /* espacio entre header y hero */
+    margin-bottom: 90px;
+    background: url(/Imagenes/imagen\ conclusion.png) center/cover no-repeat;
+    padding: 2rem;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #000000;
+    outline: 3px solid #000000;
+    outline-offset: -90px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+}
+
+.hero_title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #a7a7a7;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+    max-width: 100%;
+    text-shadow:
+    -1px -1px 0 #000000,
+     1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+     1px 1px 0 #000000;
+}
+/*Final apartado del hero del index */
+
+/*INICIO APARTADO INTRODUCCIÓN*/
+
+/*Inicio apartado del hero de introducción*/
+.hero_section_introducción {
+    background: url('Imagenes/huerta_helena_villamil_3.jpg') center/cover no-repeat;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #e6efe4; /* verde grisáceo muy suave */
+    border: 2px solid #8fa786;
+    padding: 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); /* sombra ligera */
+    border-radius: 0; /* rectangular */
+}
+
+.hero_texto {
+    background-color: rgba(242, 247, 241, 0.9); /* verde claro muy suave */
+    padding: 2rem;
+    width: 100%;
+    text-align: justify;
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+    border: 1px solid #a2b89a;
+}
+
+.hero_texto h1 {
+    margin: 0;
+    color: #465c40; /* verde oscuro elegante */
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ligera sombra */
+}
+
+.hero_texto p {
+    font-size: 1.2rem;
+    color: #34462e;
+    line-height: 2.2;
+    margin-top: 2rem;
+    text-align: justify;
+}
+/*Final apartado del hero de introducción*/
+
+/*Inicio apartado de la galeria introducción*/
+.galeria-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+    padding: 5rem;
+    margin-bottom: 1rem;
+}
+
+.galeria-btn {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    height: 10px 10px; /* mismo alto que las imágenes */
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.galeria-btn:hover {
+    background-color: rgba(217, 221, 157, 0.8);
+}
+
+.galeria-container {
+    overflow: hidden;
+    width: 100%; /* 2 imágenes de 400px + 25px de espacio */
+    border-radius: 10px;
+    max-width: 1140px;
+}
+
+.galeria {
+    display: flex;
+    
+    transition: transform 0.4s ease;
+    scroll-behavior: smooth;
+}
+
+.flip-card {
+    width: calc(50% - 20px);  /* 10px de margen entre ellas. Con esto cambio el tamaño que ocupan */
+    height: 344px;
+    margin-right: 40px;
+    perspective: 1000px;
+    flex-shrink: 0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-back {
+    background-color: #a71c1c;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+/*Final apartado de la galeria introducción*/
+
+/*Inicio apartado cajas introducción*/
+.container_imagen_contexto1{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.titulo_imagen_contexto1{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.imagen_separación_contexto1{
+    width: 50%;
+    height: 18rem;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #000000;
+}
+
+.referencia_imagen_separación_contexto1{
+    font-size: 12px;
+    text-align: center;
+}
+.container_cajas{
+    margin-top: 1px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.fila_cajas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que se acomode en pantallas pequeñas */
+    margin-bottom: 2rem;
+}
+  
+.caja_acordeon {
+    flex: 1 1 45%;
+    border-radius: 12px;
+    background-color: #e0e4bc;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    min-width: 300px; /* Evita que se vuelvan muy pequeñas */
+    margin-top: 1px;
+}
+  
+.encabezado {
+    background-color: #6d746c; /* verde más oscuro y contrastante */
+    color: #ffffff;            /* texto blanco para resaltar */
+    padding: 1.5rem 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra ligera para separarlo del fondo */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.encabezado:hover {
+    background-color: #466040; /* un verde un poco más oscuro cuando el mouse pasa encima */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* sombra más intensa al hover */
+}
+
+.icono{
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+    font-weight: bold;
+    color: #000000;
+}
+  
+.contenido {
+    max-height: 450px;
+    overflow-y: auto;
+    display: none;
+    transition: max-height 0.3s ease;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Cuando la caja esté abierta */
+.caja_acordeon.activa .contenido {
+   display: block;
+}
+
+.contenido::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+.contenido::-webkit-scrollbar-thumb {
+    background-color: #c8d675;
+
+}
+
+.cerrar_caja {
+    text-align: center;
+    margin-top: 1rem;
+}
+  
+.cerrar_btn {
+    background-color: #e08a58;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subseccion {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  
+.subseccion h3 {
+    margin-top: 1rem;
+    color: #000000;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+  
+.subseccion p {
+    margin-top: 0.5rem;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+  
+.contenido_horizontal2 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  
+.imagen img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.imagen_UNICEF img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    height: 17rem;
+}
+  
+.texto {
+    font-size: 1.2rem;
+    flex: 1 1 50%;
+}
+
+
+.parrafo_inicial_contexto {
+    text-align: justify;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+  
+.contenido_imagen_texto {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    color: #000000;
+}
+  
+.contenido_imagen_texto .imagen img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+  
+.contenido_imagen_texto .texto {
+    flex: 1 1 300px;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/*Final apartado cajas introducción*/
+
+/*Inicio de la sección del footer de introducción*/
+.encabezado_footer{
+    background-color: #74a05b;
+    color: #000000;
+    padding: 2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.caja_acordeon_footer{
+    flex: 1 1 45%;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #f0e1af;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    min-width: 300px; /* Evita que se vuelvan muy pequeñas */
+    border: 1px solid #000000;
+    margin-top: 2rem;
+}
+
+/* Esto es lo que muestra el contenido al hacer clic */
+.caja_acordeon_footer .contenido {
+    display: none;
+}
+  
+.caja_acordeon_footer.activa .contenido {
+    display: block;
+}
+/*Final de la sección del footer de introducción*/
+
+/*Inicio apartado cartas de introducción*/
+.cards_container_introducción {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+.card_introducción {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+
+.card_image_introducción {
+    width: 100%;
+    height: 150px; /* o el tamaño que quieras */
+    object-fit: cover; /* para que no se deforme la imagen */
+    border-radius: 10px 10px 0 0; /* opcional: bordes redondeados arriba */
+}
+
+.card_front_introducción{ /*Para la imagen que ocupa todo dentro del card front*/
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.card_inner_introducción {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  
+.card_introducción:hover .card_inner_introducción {
+    transform: rotateY(180deg);
+  }
+  
+.card_introducción.flipped .card_inner_introducción {
+    transform: rotateY(180deg);
+  }
+  
+.card_front_introducción, .card_back_introducción {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border: 1px solid #000000;
+    border-radius: 12px;
+    background: #f0b76d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+.card_back_introducción {
+    background: #dee69a;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+    border-radius: 10px;
+  }
+
+.cards_intro {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+.cards_titulo{
+    font-size: 5rem;
+    margin-bottom: 100px;
+    color: #000000;
+  }
+  
+.cards_explicación{
+    font-size: 1.5rem;
+    color: #000000;
+  }
+
+.card_concepto_introducción{
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+
+.definición_card_introducción{
+    text-align: center;
+    line-height: 1.1;
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+
+
+input[type="button"] {
+    background-color: #beaa33; /* Verde */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 1px 1px 30px -5px coral;
+}
+
+input[type="button"]:hover {
+    background-color: #eb8b8b;
+}
+/*Final apartado cartas introducción*/
+
+/*FINAL APARTADO DE INTRODUCCIÓN*/
+
+
+
+
+/*INICIO APARTADO DE DISCUSIÓN*/
+
+/*Inicio apartado del hero de discusión*/
+.hero_section_discusión {
+    background: url('Imagenes/bogotá.jpg') center/cover no-repeat;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #e6efe4; /* verde grisáceo muy suave */
+    padding: 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #8fa786;
+    border-radius: 0; /* recto para mayor uniformidad */
+    box-sizing: border-box;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); /* sombra ligera */
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.hero_texto_discusión {
+    background-color: rgba(242, 247, 241, 0.9); /* verde claro suave */
+    padding: 2rem;
+    width: 100%;
+    text-align: justify;
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+    border: 1px solid #a2b89a;
+}
+
+.hero_texto_discusión h1 {
+    margin: 0;
+    color: #465c40;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero_texto_discusión p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #34462e;
+    line-height: 2.2;
+    text-align: justify;
+}
+/*Final apartado hero discusión*/
+
+/*Inicio apartado de las cajas discusión*/
+.container_cajas_discusión {
+    margin: 2rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+}
+
+.fila_cajas_discusión {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.caja_acordeon_discusión {
+    flex: 1 1 45%;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 320px;
+    overflow: hidden;
+}
+
+.caja_acordeon_discusión:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.encabezado_discusión {
+    background-color: #1e5631;
+    color: white;
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contenido_discusión {
+    display: none;
+    max-height: 550px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.caja_acordeon_discusión.activa .contenido_discusión {
+    display: block;
+}
+
+/* Scrollbar */
+.contenido_discusión::-webkit-scrollbar {
+    width: 6px;
+}
+.contenido_discusión::-webkit-scrollbar-thumb {
+    background-color: #a8d5ba;
+    border-radius: 5px;
+}
+
+/* Texto */
+.subseccion_discusión p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #000000;
+}
+
+/* Parrafos lado a lado */
+.parrafos_lado_a_lado_saberes {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.parrafos_lado_a_lado_saberes p {
+    flex: 1 1 45%;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* Imagen con mensaje */
+.imagen_con_mensaje {
+    position: relative;
+    width: 70%;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.imagen_con_mensaje img {
+    width: 100%;
+    display: block;
+    transition: filter 0.4s ease;
+    border-radius: 15px;
+}
+
+.mensaje_hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.mensaje_hover p:first-of-type {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1rem;
+}
+
+.mensaje_hover .fuente {
+    font-size: 0.9rem;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.imagen_con_mensaje:hover img {
+    filter: blur(1px) brightness(0.7);
+}
+.imagen_con_mensaje:hover .mensaje_hover {
+    opacity: 1;
+}
+/*Final apartado de los paneles discusión*/
+
+/*Inicio apartado del hero2 de discusión*/
+.hero_section_banner2{
+    margin-top: 3rem;
+}
+.hero_texto_banner2{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #eed99a;
+    border-radius: 20px;
+    padding: 2rem;
+    min-height: 70vh; /* cambiado de height a min-height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    overflow-y: auto; /* permite scroll si el texto crece mucho */
+    overflow-wrap: break-word;
+    word-break: break-word; 
+}
+
+.hero_texto_banner2 p{
+    background-color: rgba(240, 227, 208, 0.85); /* fondo blanco semitransparente */
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+/*Final apartado del hero2 de discusión*/
+
+/*Inicio apartado de cartas discusión*/
+.cards_container_discusión {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+  
+.card_discusión {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+  
+.card_inner_discusión {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(0deg);
+}
+  
+.card_discusión.flipped .card_inner_discusión {
+    transform: rotateY(180deg);
+}
+  
+.card_front_discusión, .card_back_discusión {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+  
+.card_front_discusión {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+}
+  
+.card_concepto_discusión {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: center;
+}
+  
+.card_back_discusión {
+    background: #e4f0e0;
+    color: #1e3d1e;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    gap: 1.5rem;
+}
+  
+.card_back_discusión input[type="button"] {
+    background-color: #4a8f4f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+  
+.card_back_discusión input[type="button"]:hover {
+    background-color: #326b37;
+}
+/*Final apartado cartas discusión*/
+
+/*Inicio contenido SOBERANÍA discusión*/
+.container_soberanía_discusión_soberanía {
+    width: 90vw;           /* ocupa el 90% del viewport */
+    max-width: 1400px;     /* tope igual al recomendado antes */
+    background: linear-gradient(135deg, #c4e2b3, #d8eccd);
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Subsecciones */
+.subseccion_soberanía_discusión {
+    background: #f8faf7;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    border-radius: 8px;
+    border: 1px solid #c7dbc0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    max-width: 1500px;
+    font-size: 1.1rem;
+    color: #34462e;
+    line-height: 1.8;
+}
+
+.hero_texto_soberanía_discusión {
+    background: #e7f4e3;
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid #c7dbc0;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto 2rem auto;
+    color: #2f3c2b;
+    line-height: 1.8;
+}
+
+.hero_texto_soberanía_discusión h1 {
+    font-family: "Merriweather", serif;
+    font-size: 2.5rem;
+    color: #17420f;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #8fa786;
+    padding-bottom: 0.5rem;
+}
+
+.hero_texto_soberanía_discusión p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+.titulo_tarjetas_grande_introducción {
+    width: 90vw;           /* fluye en casi todo el viewport */
+    max-width: 1400px;     /* pero se “aplana” un poco en pantallas muy grandes */
+    margin: 3rem auto 2rem;
+    padding: 0 2rem;
+    background: #69945b;
+    border: 2px solid #4f7242;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.titulo_tarjetas_grande_introducción h3 {
+    color: #000000;              /* verde principal */
+    font-size: 2rem;             /* tamaño destacado */
+    font-weight: 700;            /* negrita para resaltar */
+    text-transform: uppercase;   /* versalita */
+    letter-spacing: 1px;         /* separación de letras */
+    margin-top: 1rem;
+    margin-bottom: 1rem;         /* espacio inferior */
+    padding-bottom: 0.5rem;      /* espacio interno abajo */
+    border-bottom: 3px solid #a2b89a; /* línea decorativa */
+    text-align: center;          /* centrado */
+}
+
+.titulo_tarjetas_grande {
+    width: 90vw;           /* fluye en casi todo el viewport */
+    max-width: 1400px;     /* pero se “aplana” un poco en pantallas muy grandes */
+    margin: 3rem auto 2rem;
+    padding: 0 2rem;
+    background: #69945b;
+    border: 2px solid #4f7242;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.texto_titulo_tarjetas p {
+    background: #f2f7f1; /* verde muy clarito */
+    border: 0px solid #a2b89a;
+    border-radius: 0; /* rectangular */
+    padding: 2rem;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #000000;
+    text-align: justify;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.subseccion_soberanía_discusión h3 {
+    font-family: "Merriweather", serif;
+    font-size: 1.8rem;
+    color: #3c5239;
+    text-transform: uppercase;
+    border-bottom: 2px solid #8fa786;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.subseccion_soberanía_discusión p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 2.3;
+    text-align: justify;
+}
+
+
+
+/*Inicio foto despojo*/
+.flip_container {
+    width: 100%;
+    max-width: 600px;             /* antes: width fija */
+    aspect-ratio: 600 / 350;      /* mantiene proporción en lugar de height fijo */
+    perspective: 1000px;          /* profundidad para el efecto 3D */
+    margin: 1rem auto;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .flip_inner {
+    position: absolute;           /* llena todo el contenedor */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+  }
+  
+  /* Al pasar el mouse o hacer click, girar */
+  .flip_container.flip_active .flip_inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Caras delantera y trasera */
+  .flip_front,
+  .flip_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    backface-visibility: hidden;  /* Oculta la parte trasera cuando giras */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  /* Imagen frontal */
+  .flip_front img.foto_despojo_prueba {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Cara trasera con referencia */
+  .flip_back {
+    background-color: #e6efe4;    /* color suave tipo verde muy claro */
+    flex-direction: column;
+    color: #3c5239;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);   /* para que la parte trasera esté invertida */
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid #a2b89a;
+    line-height: 1.5;
+  }
+  
+  .flip_back h1 {
+    font-size: 1.3rem;
+    color: #3c5239;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .flip_back a {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #2e7d32;               /* verde para el link */
+    text-decoration: none;
+    word-break: break-word;       /* corta bien si es largo */
+    padding: 0.5rem;
+    background: rgba(162, 184, 154, 0.2); /* fondo muy suave */
+    border-radius: 6px;
+    border: 1px solid #a2b89a;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .flip_back a:hover {
+    color: #1b4e1d;
+    background: rgba(162, 184, 154, 0.35); /* cambio de color suave */
+    border-color: #7a9a73;
+  }
+/*Final foto despojo*/
+
+
+
+/*Final contenido soberanía discusión*/
+
+/*Inicio apartado de la galeria discusión*/
+.galeria_wrapper_discusión {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+    padding: 5rem;
+}
+
+.galeria-btn {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    height: 10px 10px; /* mismo alto que las imágenes */
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.galeria-btn:hover {
+    background-color: rgba(217, 221, 157, 0.8);
+}
+
+.galeria-container {
+    overflow: hidden;
+    width: 100%; /* 2 imágenes de 400px + 25px de espacio */
+    border-radius: 10px;
+    max-width: 1140px;
+}
+
+.galeria {
+    display: flex;
+    
+    transition: transform 0.4s ease;
+    scroll-behavior: smooth;
+}
+
+.flip-card {
+    width: calc(50% - 20px);  /* 10px de margen entre ellas. Con esto cambio el tamaño que ocupan */
+    height: 344px;
+    margin-right: 40px;
+    perspective: 1000px;
+    flex-shrink: 0;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-back {
+    background-color: #a71c1c;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+/*Final apartado de la galeria discusión*/
+
+.hero_title_discusión {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+    max-width: 100%;
+}
+/*Final del apartado del hero*/
+
+
+
+
+
+
+
+
+
+.acordeon_maria {
+  margin: 2rem auto;
+  margin-left: 6.3rem;
+  margin-right: 6.3rem;
+  background: #b8bdc7;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: 'Georgia', serif;
+}
+
+.acordeon_titulo {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #f0f0e9;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.acordeon_contenido {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #fff;
+  padding: 0 1.5rem;
+}
+
+.acordeon_contenido p {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #000;
+  text-align: justify;
+}
+
+.acordeon_cerrar {
+  margin: 1rem auto 1.5rem;
+  display: block;
+  background-color: #f0f0e9;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.acordeon_cerrar:hover {
+  background-color: #e5e5da;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*INICIO APARTADO DE SANTA ELENA*/
+/*Inicio hero santa elena*/
+.hero_section_santaelena {
+    background: url('Imagenes/puerta\ .png') center/cover no-repeat;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #e6efe4; /* verde grisáceo muy suave */
+    padding: 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #8fa786;
+    border-radius: 0; /* recto para mayor uniformidad */
+    box-sizing: border-box;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); /* sombra ligera */
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.hero_texto_santaelena {
+    background-color: rgba(242, 247, 241, 0.9); /* verde claro suave */
+    padding: 2rem;
+    width: 100%;
+    text-align: justify;
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+    border: 1px solid #a2b89a;
+}
+
+.hero_texto_santaelena h1 {
+    margin: 0;
+    color: #465c40;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero_texto_santaelena p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #34462e;
+    line-height: 2.2;
+    text-align: justify;
+}
+/*Final apartado hero santa elena*/
+
+
+
+
+
+
+.tarjetas-huerta-vertical {
+    width: 100%;
+    max-width: 1000px;       /* Antes 800px, ahora más ancho */
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;             /* Más espacio entre tarjetas */
+    padding: 0 1.5rem;
+    margin-top: 9rem;
+}
+  
+.tarjeta-vertical {
+    position: relative;
+    background: #131d03;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+  
+.tarjeta-vertical:hover {
+    transform: translateY(-5px);
+}
+  
+.tarjeta-vertical h3 {
+    background: #4b5e48;
+    color: rgb(224, 224, 219);
+    padding: 1.5rem;           /* Un poco más de padding */
+    margin: 0;
+    font-size: 2rem;         /* Un poco más grande el título */
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+  
+.tarjeta-vertical img {
+    width: 100%;
+    height: 400px;             /* Antes 250px, ahora 400px */
+    object-fit: cover;
+}
+  
+.overlay-vertical {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(121,155,115,0.9);
+    opacity: 0;
+    color: white;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+  
+.tarjeta-vertical:hover .overlay-vertical {
+    opacity: 1;
+}
+  
+.overlay-vertical p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+  
+.btn-vertical {
+    background: white;
+    color: #4c6048;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+  
+.btn-vertical:hover {
+    background: #e8e8e8;
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/*Final de la sección del footer*/
+
+/*Inicio apartado del responsive*/
+
+@media(max-width:1076px){ /*Según la pantalla edito los pixeles para decir que pasa cuando llega a tal cantidad*/
+   
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    .nav_bar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: greenyellow;
+        border-top: 1px solid rgba(0,0,0.1);
+        display: none;
+    }
+
+    .nav_element{
+        width: 100%;
+    }
+
+    .submenú_list{
+        position: relative;
+        width: 100%;
+    }
+
+    .estilo_lista{
+        background: #d99494;
+    }
+
+    #menú_bar:checked ~ .nav_bar{
+        display: initial;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .hero_title {
+      font-size: 2rem; /* Tamaño más pequeño en pantallas angostas */
+    }
+  
+    .hero_subtitle {
+      font-size: 1rem; /* También puedes ajustar el subtítulo si se ve muy grande */
+    }
+  }
+
+/*Responsive galeria*/
+@media (max-width: 768px) {
+.galeria-container {
+    width: 420px;
+}
+
+.flip-card {
+    width: 350px;
+    height: 230px;
+}
+
+    .galeria-btn {
+        height: 230px;
+        font-size: 1.8rem;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .flip-card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .galeria {
+        gap: 20px;
+    }
+
+    .galeria-btn {
+        height: 200px;
+        font-size: 1.6rem;
+    }
+}
+
+  /* Responsive: en pantallas menores a 768px el contenido se apila */
+@media (max-width: 768px) {
+.contenido-horizontal {
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+  
+.texto {
+    flex: 1 1 100%;
+}
+}
+
+/* Texto lado a lado para que en móviles se acomoden en columna */
+@media (max-width: 768px) {
+    .parrafos_lado_a_lado {
+      flex-direction: column;
+    }
+  }
+
+/*Final apartado del responsive*/
+  

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Historia de vida. Huerta Santa Elena</title>
+      <link rel="stylesheet" href="conceptos.css" />
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Container General -->
+    <div class="container">
+
+      <!-- Header -->
+      <header>
+        <a href="index.html" class="logo"></a>
+        <input type="checkbox" id="menú_bar">
+        <label for="menú_bar">Menú</label>
+          <nav class="nav_bar">
+              <ul class="nav_list">
+              <li class="nav_element">
+                  <a href="inicio.html" class="nav_opción_inicio">
+                  <img src="Imagenes/flecha-izquierda.png" alt="Inicio" class="icono_inicio">
+                  </a>
+              </li>
+              <li class="nav_element">
+                  <a href="inicio.html" class="nav_opción_inicio">
+                  <img src="Imagenes/inicio.svg" alt="Inicio" class="icono_inicio">
+                  </a>
+              </li>
+              </ul>
+          </nav>
+      </header>
+
+      <section class="hero_section_discusión">
+        <div class="hero_texto_discusión">
+          <h1></h1>
+            <p>
+              La ciudad no es un escenario neutral donde las personas simplemente habitan, sino un espacio socialmente producido y dinámico, en el que se generan y reproducen relaciones de poder que configuran formas de vida, experiencias, desplazamientos y exclusiones (Lefebvre, 1974). Este proceso activo implica que la ciudad es tanto producto como motor de las diferentes interacciones y tensiones que en ella toman lugar. 
+            </p>
+            <p>
+              Esta producción no ocurre únicamente a través de decisiones institucionales o grandes proyectos, sino también a partir de las practicas cotidianas, las condiciones materiales y las relaciones afectivas y simbólicas que se construyen entre quienes habitan la ciudad, especialmente de aquellos cuya experiencia se ve atravesada por la marginación y el olvido de su presencia por medio de los planes de desarrollo (Castells, 2004). En esta lógica, el modelo urbano dominante no solo silencia las formas de vida que son distintas, sino que, por medio del urbanismo estatal y el privado crean un espacio que fragmenta la experiencia colectiva e imponen un tipo de ciudad funcional a los intereses de las elites (Lefebvre, 1974).
+            </p>
+            <p>
+              Este nuevo espacio es entonces el resultado de tomar el territorio vivido y compartido, para ser transformado en una superficie regulada por la propiedad privada, sin embargo, es ahí donde surgen las formas de resistencia que además de luchar por su permanencia en el espacio, también logran resignificarlo y construirlo. Ejemplos de esta resistencia son las huertas urbanas; espacios de cultivo que moldean su forma de habitar la ciudad, no solo desde la alimentación, sino desde la autonomía y la separación que ofrecen de los sistemas dominantes, que, si bien siguen siendo determinantes e influyentes, también resultan ser profundamente cuestionados y atacados al ser formas de hacer ciudad desde abajo.
+            </p>
+        </div>
+      </section>
+      
+      <!--Inicio cajas-->
+      <div class="container_sección">
+
+        <section class="texto_titulo_tarjetas1">
+
+          <p>
+            Pensar la ciudad es también pensar en las dimensiones que la componen, en los entramados que hacen posible, o imposible, habitarla. La vida urbana debe comprenderse desde las condiciones materiales, sociales y políticas que la configuran, entre las cuales se encuentran la infraestructura y el espacio, las cuales ocupan un lugar central, pues no son conceptos neutros ni independientes, sino elementos profundamente interrelacionados que organizan, sostienen y a la vez restringen la vida cotidiana. A través de ellos se distribuyen oportunidades y se marcan desigualdades, se habilitan ciertas formas de vida mientras se excluyen otras.
+          </p>
+
+          <div class="dimensiones-container">
+            <ul class="dimensiones-list">
+
+              <!-- INFRAESTRUCTURA: Introducción -->
+              <li>
+                <h5>Infraestructura</h5>
+
+                <p>
+                  Preguntarse por la relación entre lo material y lo social ha sido una preocupación clave dentro de los estudios antropológicos sobre infraestructura (Larkin, 2013; Gupta, 2003; Latour, 2005; Amin, 2014). Esta preocupación ha permitido desplazar la mirada más allá del objeto técnico para entender que la infraestructura no puede reducirse a su función instrumental, sino que deben ser pensadas como ensamblajes complejos, sistemas que regulan y estructuran la vida colectiva, conectando cuerpos, ideas, promesas, conflictos y desigualdades.
+                </p>
+
+                <p>
+                  Desde esta perspectiva, la infraestructura no es un mero soporte físico que facilita actividades humanas, sino un entramado denso de relaciones sociales, políticas y afectivas que condicionan quién puede habitar, circular, participar o incluso imaginar ciertos futuros. 
+                </p>
+
+                <!-- ÍCONOS PARA MODALES -->
+                <div class="iconos-modal-dimensiones">
+                  <button class="icon-btn" onclick="abrirModal('modalInfra1')">📡</button>
+                  <button class="icon-btn" onclick="abrirModal('modalInfra2')">🚧</button>
+                  <button class="icon-btn" onclick="abrirModal('modalInfra3')">🏗️</button>
+                </div>
+
+                <!-- PÁRRAFO FINAL VISIBLE -->
+                <p>
+                  Una misma obra puede ser para algunos un signo de desarrollo, y para otros una amenaza directa a su forma de vida. El estudio de la infraestructura se convierte, entonces, en una vía para analizar los conflictos urbanos, no solo por lo que construyen, sino por lo que significan.
+                </p>
+              </li>
+
+              <!-- ESPACIO: permanece sin cambios -->
+              <li>
+                <h5>Espacio</h5>
+                <p>
+                  El espacio, lejos de ser una superficie vacía o un soporte neutro, es una construcción social y política que se transforma y que se vive desde la experiencia. No nace dado, sino que es el resultado de relaciones sociales, históricas y simbólicas que se entrelazan con el territorio que habitamos (Lefebvre, 1974). Habitar un lugar no es solo estar en él, sino también darle sentido; uno que se construye a través de vínculos, memorias, recorridos cotidianos, conflictos y afectos. Así, el espacio deja de ser solo un tema de mapas o planos para volverse un campo cargado de historia, luchas y significados (Segaud, 2008).
+                </p>
+
+                <!-- ÍCONOS PARA MODALES -->
+                <div class="iconos-modal-dimensiones">
+                  <button class="icon-btn" onclick="abrirModal('modalEspacio1')">📍</button>
+                  <button class="icon-btn" onclick="abrirModal('modalEspacio2')">🧭</button>
+                  <button class="icon-btn" onclick="abrirModal('modalEspacio3')">🪧</button>
+                </div>
+
+                <!-- PÁRRAFO FINAL VISIBLE -->
+                <p>
+                  Pensar el espacio así nos ayuda a entender que no se trata solo de diseño o urbanismo. Lo importante es preguntarnos quién tiene derecho a habitar, a quedarse, a apropiarse de un lugar, y quién es expulsado, invisibilizado o desplazado. Por eso, estudiar el espacio también es estudiar el poder, el conflicto y las formas de resistencia que emergen desde abajo (Harvey. D, 2012).
+                </p>
+              </li>
+
+            </ul>
+          </div>
+
+          <p>
+            Comprender estos conceptos como entramados de poder, conflicto y posibilidad permite acercarse críticamente a las formas en que se produce la ciudad, y a las resistencias que emergen desde los márgenes frente a esa producción desigual. Abordarlos es, por tanto, una vía para preguntarse no solo por cómo se construye la ciudad, sino también por quién la habita, bajo qué condiciones, y desde dónde se siembran sus transformaciones.
+          </p>
+        </section>
+      </div>
+
+      <!-- MODALES INFRAESTRUCTURA -->
+      <div id="modalInfra1" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal('modalInfra1')">&times;</span>
+          <p>En su dimensión más evidente, la infraestructura incluye todos aquellos elementos materiales que permiten la vida urbana: calles, redes eléctricas, puentes, hospitales, transporte público. Como plantea Uzzell (1981), se trata de la manera en que transformamos el entorno natural para satisfacer necesidades colectivas. Pero más allá de su presencia física, la infraestructura condiciona nuestra experiencia: permite o impide moverse, acceder, comunicarse o incluso permanecer.</p>
+        </div>
+      </div>
+
+      <div id="modalInfra2" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal('modalInfra2')">&times;</span>
+          <p>La infraestructura no solo conecta, sino que también excluye, y esto es debido a que su disposición define las trayectorias que son posibles y las que son imposibles. De ahí que autores como Latour (2005) o Gupta (2003) subrayen que no se trata simplemente de objetos inertes, sino de elementos con agencia en la configuración del espacio urbano. Lo que se construye en términos materiales repercute en las formas de interacción social, y desde allí se produce también un tipo de ciudadanía, de relación con el Estado y de expectativa sobre el desarrollo.</p>
+        </div>
+      </div>
+
+      <div id="modalInfra3" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal('modalInfra3')">&times;</span>
+          <p>La promesa misma de la infraestructura; progreso, conectividad e integración, es también parte del análisis de la ciudad. En muchos casos, como plantea Hetherington (2014), el resultado final de la obra no importa tanto como las ideas que moviliza, tales como: la ilusión de modernidad, el discurso de inclusión y las formas despojo, que al final son la representación simbólica del Estado (Uribe, 2022).</p>
+        </div>
+      </div>
+
+
+
+      <!-- Modal Espacio 1 -->
+      <div id="modalEspacio1" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal('modalEspacio1')">&times;</span>
+          <p>
+            Esto implica que el espacio no es un contexto pasivo, sino un escenario vivo y abierto, lleno de conflictos en coexistencia que nos permite situarnos y experimentarlo (Massey. D, 2005). Desde esta mirada, es por la cual abordar y explorar las diferentes experiencias que toman lugar es de gran importancia, pues nos permiten aprender nuevas formas de apropiarnos y valer las prácticas, al igual que los conocimientos, que nos hacen darle un valor al momento en que nos encontramos y en que estamos situados. 
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal Espacio 2 -->
+      <div id="modalEspacio2" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal('modalEspacio2')">&times;</span>
+          <p>
+            Es entonces que entendemos que el espacio no es igual para todas las personas, pues existe quienes se mueven con libertad, y por el otro lado quienes son desplazados, encerrados y presionados; hay lugares que son celebrados y trabajados, mientras que otros tratan de ser borrados.
+          </p>
+        </div>
+      </div>
+
+      <!-- Modal Espacio 3 -->
+      <div id="modalEspacio3" class="modal">
+        <div class="modal-contenido">
+          <span class="cerrar" onclick="cerrarModal('modalEspacio3')">&times;</span>
+          <p>
+            En este orden, los procesos de territorialización y desterritorialización son claves para profundizar en los sentidos que le dan valor a dichos espacios (Haesbaert, 2013), reconociendo así las diferentes dimensiones que lo componen, tales como la práctica, la experiencia y la representación material (Lefebvre, 1974).
+          </p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      <!--Galeria-->
+        <div class="galeria_wrapper_discusión">
+          <button class="galeria-btn izquierda" onclick="moverGaleria(-1)">&#10094;</button>
+        
+              <div class="galeria-container">
+                  <div class="galeria" id="galeria">
+                  
+                      <div class="flip-card">
+                          <div class="flip-inner">
+                              <div class="flip-front">
+                                  <img src="Imagenes/galeria-discusión.png" alt="Imagen 1">
+                              </div>
+                              <div class="flip-back">
+                                  <h1>Explicación de la imagen</h1>
+                                  <p>Referencia</p>
+                              </div>
+                          </div>
+                      </div>
+          
+                      <div class="flip-card">
+                          <div class="flip-inner">
+                              <div class="flip-front">
+                                  <img src="Imagenes/galeria-discusión2.png" alt="Imagen 2">
+                              </div>
+                              <div class="flip-back">
+                                  <h1>Explicación de la imagen</h1>
+                                  <p>Referencia</p>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="flip-card">
+                          <div class="flip-inner">
+                              <div class="flip-front">
+                                  <img src="Imagenes/galeria-discusión3.png" alt="Imagen 2">
+                              </div>
+                              <div class="flip-back">
+                                  <p>Mensaje 2</p>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="flip-card">
+                          <div class="flip-inner">
+                              <div class="flip-front">
+                                  <img src="Imagenes/galeria-discusión4.png" alt="Imagen 2">
+                              </div>
+                              <div class="flip-back">
+                                  <p>Mensaje 2</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+        
+          <button class="galeria-btn derecha" onclick="moverGaleria(1)">&#10095;</button>
+      </div>
+
+      <div class="container_sección">
+
+        <section class="texto_titulo_tarjetas1">
+          <p>
+            Para pensar en estas experiencias, se plantea abordar el caso de las huertas urbanas, las cuales deben entenderse desde su autonomía o soberanía en relación con el espacio que habitan y transforman.
+          </p>
+          <p>
+            Más que tratarse de una definición única o cerrada, se proponen algunas aproximaciones clave que permiten abrir la mirada hacia las tensiones, apropiaciones y resistencias que se configuran desde estos lugares. Lejos de ser categorías fijas, se entienden como herramientas para leer una realidad compleja y situada, donde lo urbano se vive y se produce de múltiples maneras, no siempre reconocidas por los discursos dominantes.
+          </p>
+
+          <div class="dimensiones-container">
+                      
+              <div class="cards_container_discusión">
+
+                <div class="card_discusión" onclick="this.classList.toggle('flipped')">
+                  <div class="card_inner_discusión">
+                    <div class="card_front_discusión" style="background-image: url('Imagenes/pimenton1.png');">
+                      <h3 class="card_concepto_discusión">Soberanía Alimentaria</h3>
+                    </div>
+                    <div class="card_back_discusión">
+                      <p></p>
+                      <input type="button" value="Ver más" onclick="location.href='soberanía.html'; event.stopPropagation();">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card_discusión" onclick="this.classList.toggle('flipped')">
+                  <div class="card_inner_discusión">
+                    <div class="card_front_discusión" style="background-image: url('Imagenes/urbanuzación1.png');">
+                      <h3 class="card_concepto_discusión">Urbanización</h3>
+                    </div>
+                    <div class="card_back_discusión">
+                      <p></p>
+                      <input type="button" value="Ver más" onclick="location.href='urbanización.html'; event.stopPropagation();">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card_discusión" onclick="this.classList.toggle('flipped')">
+                  <div class="card_inner_discusión">
+                    <div class="card_front_discusión" style="background-image: url('Imagenes/Santa\ Elena\ 2.png');">
+                      <h3 class="card_concepto_discusión">Huerta urbana</h3>
+                    </div>
+                    <div class="card_back_discusión">
+                      <p></p>
+                      <input type="button" value="Ver más" onclick="location.href='huerta_urbana.html'; event.stopPropagation();">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </section>
+      </div>
+
+      <div class="container_cajas_discusión">
+
+        <div class="fila_cajas_discusión">
+          <section class="caja_acordeon_discusión">
+            <div class="encabezado_discusión"> Saberes ocultos </div>
+              <div class="contenido_discusión">
+                <section class="subseccion_discusión">
+                  <p>
+                    En la huerta, mucho de lo que ocurre no está mediado por discursos formales ni por explicaciones teóricas, sino por el mero sentido y valor que las personas le otorgan a lo que en su cotidianidad realizan. Lo particular de esta experiencia es 
+                    que no siempre hay un nombre claro para lo que se ejecuta, o simplemente no se comparte con la manera en que quienes estamos fuera de la huerta solemos nombrarlo. Por eso, darle una explicación común o estandarizada a lo que significa sembrar, 
+                    cuidar, asociar, construir y proteger, no solo llega a ser impreciso dentro de estos espacios, sino que también resulta ser un limitante. Dichos significados, muy al contrario de ser algo dado, nacen y se construyen desde el ensayo y la repetición a través del cuerpo y la mente. 
+                  </p>
+                  <p style="margin-top: 2rem;">
+                    Este tipo de conocimiento no necesita ser validado por agentes externos, especialmente cuando estos desconocen la magnitud del beneficio, la profunda relación con la tierra, el bienestar social que traen, y su capacidad para sostener la vida. Por tanto, lo que se pone en juego es el 
+                    saber que no siempre se dice ni reconoce, pero que orienta y acompaña, dando como resultado una forma de inteligencia práctica que opera desde la acción y la experiencia, y se aleja de la teoría.
+                  </p>
+
+                  <div class="imagen_con_mensaje">
+                    <img src="Imagenes/Proceso alimentar tierra.png" alt="Foto alimentar tierra">
+                    <div class="mensaje_hover">
+                      <p>
+                        Proceso para alimentar la tierra con residuos provenientes de la huerta. Sin uso de productos externos.
+                      </p>
+                      <p class="fuente">
+                        Fuente: Foto propia
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="parrafos_lado_a_lado_saberes">
+                    <p>
+                      No se trata únicamente de producir alimento, sino de activar formas de conocimiento que han sido históricamente desplazadas o ignoradas por los discursos hegemónicos sobre lo urbano. Esta sabiduría, que nace desde la relación directa con la tierra, tiene un valor propio, no necesita ser traducida para ser válida, y se transmite por medio del hacer colectivo.
+                    </p>
+                    <p>
+                      En este sentido, la huerta no es solo un espacio de cultivo, sino un lugar de memoria, intercambio y construcción simbólica que permite la emergencia de otros lenguajes, otras formas de entender el mundo y otras maneras de habitar la ciudad. Su potencia está en que no pide permiso, simplemente florece.
+                    </p>
+                  </div>
+                  <p style="margin-top: 2rem;">
+                    Entender el lenguaje de la huerta, desde la propia huerta, es el camino correcto para poder abordar la profundad de los procesos y sus oportunidades, pues cuando la teoría intenta capturar estas prácticas sin reconocer su forma de existir, únicamente termina por neutralizarlas. 
+                    Es por eso por lo que hablar sobre saberes ocultos no es hacer referencia a algo que está escondido, sino de algo que está presente en el espacio, pero que no entra tan fácilmente en el foco de quienes habitamos la ciudad.
+                  </p>
+                </section>
+              </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="container_cajas_discusión">
+
+        <div class="fila_cajas_discusión">
+          <section class="caja_acordeon_discusión">
+            <div class="encabezado_discusión"> Saberes ocultos </div>
+              <div class="contenido_discusión">
+                <section class="subseccion_discusión">
+                  <p>
+                    En la huerta, mucho de lo que ocurre no está mediado por discursos formales ni por explicaciones teóricas, sino por el mero sentido y valor que las personas le otorgan a lo que en su cotidianidad realizan. Lo particular de esta experiencia es 
+                    que no siempre hay un nombre claro para lo que se ejecuta, o simplemente no se comparte con la manera en que quienes estamos fuera de la huerta solemos nombrarlo. Por eso, darle una explicación común o estandarizada a lo que significa sembrar, 
+                    cuidar, asociar, construir y proteger, no solo llega a ser impreciso dentro de estos espacios, sino que también resulta ser un limitante. Dichos significados, muy al contrario de ser algo dado, nacen y se construyen desde el ensayo y la repetición a través del cuerpo y la mente. 
+                  </p>
+                  <p style="margin-top: 2rem;">
+                    Este tipo de conocimiento no necesita ser validado por agentes externos, especialmente cuando estos desconocen la magnitud del beneficio, la profunda relación con la tierra, el bienestar social que traen, y su capacidad para sostener la vida. Por tanto, lo que se pone en juego es el 
+                    saber que no siempre se dice ni reconoce, pero que orienta y acompaña, dando como resultado una forma de inteligencia práctica que opera desde la acción y la experiencia, y se aleja de la teoría.
+                  </p>
+
+                  <div class="imagen_con_mensaje">
+                    <img src="Imagenes/Proceso alimentar tierra.png" alt="Foto alimentar tierra">
+                    <div class="mensaje_hover">
+                      <p>
+                        Proceso para alimentar la tierra con residuos provenientes de la huerta. Sin uso de productos externos.
+                      </p>
+                      <p class="fuente">
+                        Fuente: Foto propia
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="parrafos_lado_a_lado_saberes">
+                    <p>
+                      No se trata únicamente de producir alimento, sino de activar formas de conocimiento que han sido históricamente desplazadas o ignoradas por los discursos hegemónicos sobre lo urbano. Esta sabiduría, que nace desde la relación directa con la tierra, tiene un valor propio, no necesita ser traducida para ser válida, y se transmite por medio del hacer colectivo.
+                    </p>
+                    <p>
+                      En este sentido, la huerta no es solo un espacio de cultivo, sino un lugar de memoria, intercambio y construcción simbólica que permite la emergencia de otros lenguajes, otras formas de entender el mundo y otras maneras de habitar la ciudad. Su potencia está en que no pide permiso, simplemente florece.
+                    </p>
+                  </div>
+                  <p style="margin-top: 2rem;">
+                    Entender el lenguaje de la huerta, desde la propia huerta, es el camino correcto para poder abordar la profundad de los procesos y sus oportunidades, pues cuando la teoría intenta capturar estas prácticas sin reconocer su forma de existir, únicamente termina por neutralizarlas. 
+                    Es por eso por lo que hablar sobre saberes ocultos no es hacer referencia a algo que está escondido, sino de algo que está presente en el espacio, pero que no entra tan fácilmente en el foco de quienes habitamos la ciudad.
+                  </p>
+                </section>
+              </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="container_cajas_discusión">
+
+        <div class="fila_cajas_discusión">
+          <section class="caja_acordeon_discusión">
+            <div class="encabezado_discusión"> Saberes ocultos </div>
+              <div class="contenido_discusión">
+                <section class="subseccion_discusión">
+                  <p>
+                    En la huerta, mucho de lo que ocurre no está mediado por discursos formales ni por explicaciones teóricas, sino por el mero sentido y valor que las personas le otorgan a lo que en su cotidianidad realizan. Lo particular de esta experiencia es 
+                    que no siempre hay un nombre claro para lo que se ejecuta, o simplemente no se comparte con la manera en que quienes estamos fuera de la huerta solemos nombrarlo. Por eso, darle una explicación común o estandarizada a lo que significa sembrar, 
+                    cuidar, asociar, construir y proteger, no solo llega a ser impreciso dentro de estos espacios, sino que también resulta ser un limitante. Dichos significados, muy al contrario de ser algo dado, nacen y se construyen desde el ensayo y la repetición a través del cuerpo y la mente. 
+                  </p>
+                  <p style="margin-top: 2rem;">
+                    Este tipo de conocimiento no necesita ser validado por agentes externos, especialmente cuando estos desconocen la magnitud del beneficio, la profunda relación con la tierra, el bienestar social que traen, y su capacidad para sostener la vida. Por tanto, lo que se pone en juego es el 
+                    saber que no siempre se dice ni reconoce, pero que orienta y acompaña, dando como resultado una forma de inteligencia práctica que opera desde la acción y la experiencia, y se aleja de la teoría.
+                  </p>
+
+                  <div class="imagen_con_mensaje">
+                    <img src="Imagenes/Proceso alimentar tierra.png" alt="Foto alimentar tierra">
+                    <div class="mensaje_hover">
+                      <p>
+                        Proceso para alimentar la tierra con residuos provenientes de la huerta. Sin uso de productos externos.
+                      </p>
+                      <p class="fuente">
+                        Fuente: Foto propia
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="parrafos_lado_a_lado_saberes">
+                    <p>
+                      No se trata únicamente de producir alimento, sino de activar formas de conocimiento que han sido históricamente desplazadas o ignoradas por los discursos hegemónicos sobre lo urbano. Esta sabiduría, que nace desde la relación directa con la tierra, tiene un valor propio, no necesita ser traducida para ser válida, y se transmite por medio del hacer colectivo.
+                    </p>
+                    <p>
+                      En este sentido, la huerta no es solo un espacio de cultivo, sino un lugar de memoria, intercambio y construcción simbólica que permite la emergencia de otros lenguajes, otras formas de entender el mundo y otras maneras de habitar la ciudad. Su potencia está en que no pide permiso, simplemente florece.
+                    </p>
+                  </div>
+                  <p style="margin-top: 2rem;">
+                    Entender el lenguaje de la huerta, desde la propia huerta, es el camino correcto para poder abordar la profundad de los procesos y sus oportunidades, pues cuando la teoría intenta capturar estas prácticas sin reconocer su forma de existir, únicamente termina por neutralizarlas. 
+                    Es por eso por lo que hablar sobre saberes ocultos no es hacer referencia a algo que está escondido, sino de algo que está presente en el espacio, pero que no entra tan fácilmente en el foco de quienes habitamos la ciudad.
+                  </p>
+                </section>
+              </div>
+          </section>
+        </div>
+      </div>
+
+      <!--
+      <div class="contenedor_paneles_conceptos_discusión">
+        <div class="panel_conceptos_discusión">
+          <h3>Experiencia situada</h3>
+          <p>
+            Sembrar en el entorno urbano transforma tanto el suelo como a quien lo habita. La experiencia del alimento, vivida desde la siembra, el cuidado y la cosecha, se convierte en una práctica situada que responde a condiciones específicas, 
+            sean materiales o inmateriales. Por un lado, están los elementos tangibles; el espacio disponible, las semillas, las herramientas, los recursos, etc., y por otro están las historias que se tejen alrededor de los cultivos; sean trayectorias 
+            personales, saberes aprendidos, afectos o voces. 
+          </p>
+          <p>
+            Desde esta perspectiva, la experiencia no debería de entenderse como una acción neutra, sino como una vivencia atravesada por relaciones, memorias, tejidos y aprendizajes que la vuelven singular. Dado a que la experiencia no es solo aquello 
+            que ocurre (acá poner la referencia de EP) sino también lo que da forma y sentido a nuestra propia identidad, cada decisión que se toma en la cosecha está dirigida por la conciencia desarrollada de las condiciones en las que se vive. Reconocer 
+            estas condiciones es lo que permite darle un valor al alimento adquirido, pues bajo las diversas dificultades y esfuerzos, es el reflejo del proceso vivido y las transformaciones dadas. 
+          </p>
+        </div>
+      </div>
+      -->
+
+        <section class="hero_section_banner2">
+          <div class="hero_texto_banner2">
+            <p>
+              En medio de este panorama, las huertas urbanas pueden entenderse tanto como espacios de resistencia, como de creación y resiliencia, donde la posibilidad de transformar los llamados “no lugares”, 
+              en lugares, permite tener una relación mas profunda y significativa con el espacio cotidiano.
+              Por lo tanto, las huertas representan una alternativa frente a un sistema que nos vuelve dependientes, y que no solo borra saberes, sino también restringe la capacidad de decisión y conciencia sobre nuestra alimentación.
+            </p>
+            <p>
+              Más allá de ser una oposición directa, se trata mas bien de una irrupción en las prácticas que nos alejan de la tierra y el alimento, de manera que nos invita a dejar de pensar en la comida como algo que debe ser procesado, 
+              manipulado, empacado y vendido, pasando a verse como la relación material con los saberes de la tierra: cuando sembrar, como nutrir la tierra, recuperar semillas.
+            </p>
+            <p>
+              La soberanía alimentaria no debe pensarse únicamente como un proyecto rural o lejano, sino como una alternativa que toma lugar en los espacios mas cotidianos de la ciudad, tal como los parques, andenes, patios, balcones, terrazas, etc.
+            </p>
+            <p>
+              Esta forma de conocimiento es la que hace posible hablar sobre soberanía alimentaria desde una perspectiva situada y real, por lo menos desde la forma de ejercerla y construirla. Esta posibilidad se sostiene en que el saber no nombrado que nace desde el hacer es, en sí mismo, una expresión de autonomía; no se trata de un conocimiento delegado o impuesto.
+            </p>
+            <p>
+              La soberanía busca resaltar el derecho de los pueblos a decidir sobre sus sistemas alimentarios, pero su campo de acción no se limita estrictamente a ese derecho per se, sino que se extiende a entender los espacios y las prácticas que hacen posible el cumplimiento de esa condición, reconociendo los aprendizajes obtenidos y la naturaleza de esta. 
+            </p>
+          </div>
+        </section>
+      
+        
+      <!--Inicio sección del footer-->
+      <footer>
+        <section class="caja">
+                <div class="header">
+                <span class="icono">📝</span>
+                <h2>Bibliografía</h2>
+                <button class="btn-toggle">Ver más ›</button>
+                </div>
+                <div class="contenido">
+                <!-- tu contenido de Bibliografía intacto -->
+                </div>
+            </section>
+      </footer>
+
+
+
+
+
+
+    </div> <!-- Cierra el container general -->
+
+
+
+
+    <!-- Apartado JS para devolver las trajetas a su estado frontal -->
+    <script> 
+      window.addEventListener('scroll', () => {
+      const flippedCards = document.querySelectorAll('.card.flipped');
+      flippedCards.forEach(card => {
+          card.classList.remove('flipped');
+      });
+      });
+    </script>
+
+    <script>
+      let lastScrollTop = 0;
+      const header = document.querySelector("header");
+      const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
+
+      window.addEventListener("scroll", () => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          if (scrollTop > lastScrollTop) {
+              // Scroll hacia abajo: ocultar header
+              header.classList.add("header-hidden");
+          } else {
+              // Scroll hacia arriba: mostrar header
+              header.classList.remove("header-hidden");
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
+      // Ocultar menú cuando se hace clic en una opción
+      navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+              header.classList.add("header-hidden");
+          });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
+      button.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
+          const target = document.getElementById(targetId);
+          const offset = 100; // Altura del header
+
+          window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: 'smooth'
+          });
+      });
+      });
+    </script>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+      if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname);
+          window.scrollTo(0, 0);
+      }
+      });
+    </script>
+
+    <!--INICIO SCRIPT SECCIONES ICONO-->
+    <script>
+      // Abre un modal
+      function abrirModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.style.display = "block";
+        }
+      }
+
+      // Cierra un modal
+      function cerrarModal(id) {
+        const modal = document.getElementById(id);
+        if (modal) {
+          modal.style.display = "none";
+        }
+      }
+
+      // Cierra el modal si haces clic fuera del contenido
+      window.onclick = function(event) {
+        const modales = document.querySelectorAll(".modal");
+        modales.forEach(function(modal) {
+          if (event.target === modal) {
+            modal.style.display = "none";
+          }
+        });
+      };
+    </script>
+    <!--INICIO SCRIPT SECCIONES ICONO-->
+
+
+
+    <script>
+    document.querySelectorAll('.caja_acordeon').forEach(caja => {
+    const encabezado = caja.querySelector('.encabezado');
+    const contenido = caja.querySelector('.contenido');
+
+    encabezado.addEventListener('click', () => {
+        const abierto = contenido.style.maxHeight && contenido.style.maxHeight !== "0px";
+        contenido.style.maxHeight = abierto ? null : contenido.scrollHeight + "px";
+    });
+    });
+    </script>
+
+  
+    <!--Script de la sección de la despliegue de la cajas de introducción-->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const acordeones = document.querySelectorAll(".caja_acordeon");
+
+    acordeones.forEach(acordeon => {
+        const encabezado = acordeon.querySelector(".encabezado");
+        const icono = encabezado.querySelector(".icono");
+        const cerrarBtn = acordeon.querySelector(".cerrar_btn");s
+
+        encabezado.addEventListener("click", () => {
+        const yaActivo = acordeon.classList.contains("activa");
+
+        // Cerrar todos
+        acordeones.forEach(item => {
+            item.classList.remove("activa");
+            const icon = item.querySelector(".icono");
+            if (icon) icon.textContent = "+";
+        });
+
+        // Abrir solo si no estaba activo
+        if (!yaActivo) {
+            acordeon.classList.add("activa");
+            if (icono) icono.textContent = "−";
+        }
+        });
+
+        // Si existe botón de cerrar, le agrega el evento
+        if (cerrarBtn) {
+        cerrarBtn.addEventListener("click", (e) => {
+            e.stopPropagation(); // Para que no active el encabezado al cerrar
+            acordeon.classList.remove("activa");
+            if (icono) icono.textContent = "+";
+        });
+        }
+    });
+    });
+    </script>
+
+    <!--Script de la sección de la despliegue de la cajas de discusión-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const acordeones = document.querySelectorAll(".caja_acordeon_discusión");
+      
+        acordeones.forEach(acordeon => {
+          const encabezado = acordeon.querySelector(".encabezado_discusión");
+      
+          encabezado.addEventListener("click", () => {
+            // Alterna la clase "activa" en la caja clickeada
+            acordeon.classList.toggle("activa");
+          });
+        });
+      });
+    </script>
+
+
+
+
+
+
+    <!--Script de la sección de la galería-->
+    <script>
+        let posicion = 0;
+
+        function moverGaleria(direccion) {
+            const galeria = document.getElementById("galeria");
+            const tarjetas = galeria.querySelectorAll(".flip-card");
+
+            if (!tarjetas.length) return;
+
+            const tarjeta = tarjetas[0];
+            const tarjetaEstilo = window.getComputedStyle(tarjeta);
+            const ancho = tarjeta.offsetWidth + parseInt(tarjetaEstilo.marginRight || 0);
+
+            const visible = 2; // número de tarjetas visibles
+            const total = tarjetas.length;
+            const maxPos = total - visible;
+
+            posicion += direccion;
+
+            if (posicion < 0) posicion = 0;
+            if (posicion > maxPos) posicion = maxPos;
+
+            const desplazamiento = posicion * ancho;
+            galeria.style.transform = `translateX(-${desplazamiento}px)`;
+        }
+    </script>
+
+  </body>
+
+</html>

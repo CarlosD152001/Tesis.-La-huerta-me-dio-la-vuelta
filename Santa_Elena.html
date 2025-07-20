@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>La Huerta Hoy</title>
+    <link rel="stylesheet" href="Santa_Elena.css" />
+
+   
+    
+  </head>
+
+  <body>
+
+    <header>
+      <a href="index.html" class="logo"></a>
+      <input type="checkbox" id="menú_bar">
+      <label for="menú_bar">Menú</label>
+      <nav class="nav_bar">
+        <ul class="nav_list">
+          <li class="nav_element">
+              <a href="inicio.html" class="nav_opción_inicio">
+                <img src="Imagenes/flecha-izquierda.png" alt="Inicio" class="icono_inicio">
+              </a>
+          </li>
+          <li class="nav_element">
+            <a href="inicio.html" class="nav_opción_inicio">
+            <img src="Imagenes/inicio.svg" alt="Inicio" class="icono_inicio">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero_section_discusión">
+      <div class="hero_texto_discusión">
+        <h1></h1>
+      </div>
+    </section>
+
+    <div class="seccion-titulo">
+      <h2>"Lo más bonito es sacar algo de mi huerta y ponerlo en la olla para <u>comerlo</u>"</h2>
+    </div>
+
+    <div class="container_carrusel_Santa">
+      <div class="storytelling-carrusel">
+        <div class="slide active">
+          <img src="Imagenes/Santa Elena 2.png" alt="Barrio La Perseverancia">
+          <p>Todo comienza en una loma, donde la ciudad parece abrirse, pero también cerrarse.</p>
+        </div>
+        <div class="slide">
+          <img src="Imagenes/puerta .png" alt="Calle del barrio">
+          <p>Aquí nací, aquí crecí. Cada adoquín tiene una historia, y cada historia, un silencio.</p>
+        </div>
+        <div class="slide">
+          <img src="imagenes/puerta-huerta.jpg" alt="Entrada de la huerta">
+          <p>No fue un plan. Fue una decisión del cuerpo: sembrar en medio del ruido.</p>
+        </div>
+        <div class="slide">
+          <img src="imagenes/huerta-plena.jpg" alt="Terreno cultivado">
+          <p>La tierra habló primero. Solo tuvimos que quedarnos a escucharla.</p>
+        </div>
+        <div class="slide">
+          <img src="imagenes/detalle-compost.jpg" alt="Compost y herramientas">
+          <p>Aquí todo se transforma. Lo que duele, lo que sobra, lo que aún está por venir.</p>
+        </div>
+        <div class="slide">
+          <img src="imagenes/trabajo-colectivo.jpg" alt="Trabajo en la huerta">
+          <p>Esta huerta no es solo mía. Es del barrio, de quienes pasan y de quienes se quedan.</p>
+        </div>
+        <div class="slide">
+          <img src="imagenes/huerta-atardecer.jpg" alt="Huerta al atardecer">
+          <p>No sembramos lechugas. Sembramos tiempo, cuidado, y la esperanza de quedarnos.</p>
+        </div>
+
+        <button class="prev" onclick="moverCarrusel(-1)">&#10094;</button>
+        <button class="next" onclick="moverCarrusel(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <!--PERFIL ME-->
+    <section class="perfil_maria">
+      <div class="foto_maria">
+        <img src="Imagenes/M.E.jpeg" alt="María Elena - Huerta Santa Elena">
+      </div>
+      <div class="descripcion_maria">
+        <h2>María Elena</h2>
+
+        <p>
+          María Elena Villamil es una mujer nacida en el barrio La Perseverancia, una zona históricamente popular de Bogotá, ubicada al pie de las montañas orientales, donde los vínculos entre lo urbano y lo rural han sido parte del paisaje cotidiano. A lo largo de su vida ha construido un camino profundamente ligado al trabajo, la permanencia en el territorio y el contacto directo con la tierra; elementos que no solo han definido su identidad, sino que han orientado sus decisiones personales y colectivas. 
+        </p>
+        
+        <p>  
+          A sus 71 años, continúa siendo una figura activa y significativa dentro de su comunidad, reconocida por su capacidad de adaptación frente a los cambios de la ciudad, su compromiso con la agricultura urbana y su insistencia en defender formas de vida sostenibles en medio de un entorno cada vez más hostil para quienes deciden sembrar.
+        </p>
+
+        <h3>"El campo vino a mí. Soy campesina de la ciudad"</h3>
+
+      </div>
+    </section>
+
+    <div class="acordeon_maria">
+      <button class="acordeon_titulo">Conocer más sobre su proyecto</button>
+      <div class="acordeon_contenido">
+        <p>
+          A lo largo de su vida, María Elena ha enfrentado múltiples tensiones derivadas de la transformación urbana, las condiciones del trabajo informal, la precariedad en el acceso a recursos y la rigidez institucional que suele dificultar la consolidación de iniciativas autónomas. A pesar de ello, ha logrado sostener un proceso que no solo ha resistido en el tiempo, sino que ha crecido en torno a una idea central: la cocina. Para María Elena, la cocina no es solo un oficio ni una fuente de ingresos, sino el núcleo desde el cual se articula su relación con el territorio, con la huerta y con las personas que la rodean. Sembrar ha sido una extensión de cocinar, y cocinar ha sido, a su vez, una forma de transformar el cultivo en algo más que producción: en cuidado, alimentación y comunidad. "Yo nací para la cocina", dice María Elena.
+        </p>
+
+        <div class="galeria_maria">
+            <div class="foto_maria2">
+              <img src="Imagenes/maria elena tarde.jpeg" alt="María Elena - Huerta Santa Elena">
+            </div>
+
+            <div class="foto_maria2">
+              <img src="Imagenes/huerta tarde.jpeg" alt="María Elena - Huerta Santa Elena">
+            </div>
+        </div>
+
+        <p>
+          La historia de su transformación, del cómo la huerta le dio la vuelta a su vida, comienza en el año 1986 cuando se traslada al barrio San Martín, justo abajo de La Perseverancia. En 1988 inició sus estudios de panadería en el SENA, con el obejtivo de poder fortalecer con formación técnica lo que por su propia cuenta ya sabía hacer. En 1991 llega a la casa donde aún vive, y que con el tiempo se convertiría en el eje de su vida cotidiana y productiva. Tras años de trabajo en distintos espacios de cocina, en 2003 decide abrir un restaurante en su hogar, permitiéndole establecer un espacio de trabajo autónomo y organizado desde su propio tiempo, condiciones y estrechamente vinculado al barrio.
+        </p>
+
+        <p>
+          Fue a partir de la experiencia con el restaurante que comenzó a considerar seriamente la posibilidad de sembrar. El patio de su casa pasó de ser un espacio sin uso a convertirse en una extensión de su cocina, en un lugar donde podía cultivar ingredientes frescos, pero también reconectar con la tierra desde lo que mejor sabía hacer. En 2007 inició el proceso de siembra, y al año siguiente, en 2008, propuso al SENA abrir un espacio de formación en agricultura urbana desde su patio. Para ello, gestionó el apoyo de la iglesia del barrio La Perseverancia, siendo este el primer momento de encuentro con la comunidad, lo que le permitió formalizar la propuesta y dar origen a la Escuela de Agricultura Urbana, un proyecto construido y orientado para compartir saberes en torno a la agricultura ejercida en la ciudad.
+        </p>
+
+        <p>
+          Desde entonces, la Huerta Santa Elena ha sido el centro de un proceso constante que articula producción alimentaria, educación comunitaria y sostenibilidad urbana. Tal fue el impacto de esta, y otras huertas, que en el año 2012 la localidad de Santa Fe fue reconocida como una de las mejores en Bogotá en materia de agricultura urbana, gracias al trabajo colectivo de catorce huertas comunitarias. Durante cinco años consecutivos, la localidad mantuvo ese reconocimiento, demostrando el valor de la organización barrial y la capacidad de las comunidades para generar modelos propios de soberanía alimentaria. Sin embargo, con el paso del tiempo, muchas de esas huertas desaparecieron por falta de apoyo, presión urbana o desgaste institucional. Hoy, según cuenta María Elena, la suya es la única de esas catorce que sigue en pie, lo que da cuenta tanto de su persistencia como de las dificultades estructurales que enfrentan este tipo de procesos en la ciudad.
+        </p>
+
+        <p>
+          Para ella, la base de todo ha sido la inquietud. Esa pregunta inicial de ¿cómo empiezo?, es lo que impulsa a las personas a acercarse a la tierra, a pensar en el cultivo no como una técnica aislada, sino como una práctica ligada a la vida cotidiana. Suele insistir en que lo primero es tener claro dónde se quiere sembrar, ya sea en casa, en un espacio comunitario o en un terreno compartido, porque el lugar condiciona lo posible y permite organizar mejor los esfuerzos. También diferencia con claridad entre el campo y la ciudad: no se trata de replicar lo rural, sino de adaptar el cultivo a las condiciones urbanas, reconociendo sus límites, pero también sus oportunidades.
+        </p>
+
+        
+
+        <button class="acordeon_cerrar">Cerrar</button>
+      </div>
+    </div>
+    <!--PERFIL ME-->
+
+    <div class="container_sección">
+
+        <section class="texto_titulo_tarjetas1">
+          <p>
+             Para poder pensar la huerta, es indispensable abordar dos de los componentes más importantes: el compostaje y las semillas, siendo estos el corazón de las prácticas internas de la huerta y las mayores fuentes de significado. A través de ellos se activa la vida del suelo, se sostiene la huerta y se conserva una forma de habitar la ciudad que resiste al desgaste, a la fragmentación y al olvido. Sin sustrato, no hay suelo vivo; sin semillas, no hay posibilidad de futuro. Por eso, en este espacio, ambas prácticas son mucho más que técnicas: son actos de autonomía, cuidado y continuidad.
+          </p>
+          <p>
+
+          <div class="dimensiones-container">
+                      
+              <div class="cards_container_discusión">
+
+                <div class="card_discusión" onclick="this.classList.toggle('flipped')">
+                  <div class="card_inner_discusión">
+                    <div class="card_front_discusión" style="background-image: url('Imagenes/pimenton1.png');">
+                      <h3 class="card_concepto_discusión">Compostaje</h3>
+                    </div>
+                    <div class="card_back_discusión">
+                      <p></p>
+                      <input type="button" value="Ver más" onclick="location.href='compostaje.html'; event.stopPropagation();">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card_discusión" onclick="this.classList.toggle('flipped')">
+                  <div class="card_inner_discusión">
+                    <div class="card_front_discusión" style="background-image: url('Imagenes/semilla\ 1.jpeg');">
+                      <h3 class="card_concepto_discusión">Semilla</h3>
+                    </div>
+                    <div class="card_back_discusión">
+                      <p></p>
+                      <input type="button" value="Ver más" onclick="location.href='semilla.html'; event.stopPropagation();">
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </section>
+    </div>
+
+
+    <section class="texto_titulo_tarjetas1">
+      <h4>Cartografía de la huerta</h4>
+      <p>
+        Haga click sobre cada emoji para ver la imagen
+      </p>
+
+      <div class="huerta-interactiva">
+        <img src="imagenes/cartgrafía.png" alt="Huerta Santa Elena" class="imagen-huerta">
+
+        <div class="emoji-punto" style="top: 10%; left: 8%;" onclick="abrirModal('modal1')">🔍</div>
+        <div id="modal1" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal1')">&times;</span>
+            <h3>Pasillo plantaciones</h3>
+            <img src="Imagenes/pasillo plataciones.jpeg" alt="Pasillo de plantaciones" style="width: 80%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 50%; left: 25%;" onclick="abrirModal('modal2')">🚧</div>
+        <div id="modal2" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal2')">&times;</span>
+            <h3>Encerramiento</h3>
+            <img src="imagenes/Encerramiento.jpeg" alt="Encerramiento" style="width: 100%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 50%; left: 80%;" onclick="abrirModal('modal3')">👤</div>
+        <div id="modal3" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal3')">&times;</span>
+            <h3>Vista casa María Elena</h3>
+            <img src="imagenes/Perspectiva ME.jpeg" alt="Vista casa María Elena" style="width: 80%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 25%; left: 20%;" onclick="abrirModal('modal4')">🏢</div>
+        <div id="modal4" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal4')">&times;</span>
+            <h3>Vista construcción</h3>
+            <img src="imagenes/Perspectiva construcción.jpeg" alt="Vista construcción" style="max-width: 300px; height: auto; display: block; margin: 1rem auto; border-radius: 10px;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 75%; left: 45%;" onclick="abrirModal('modal5')">🌿</div>
+        <div id="modal5" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal5')">&times;</span>
+            <h3>Camas de tierra</h3>
+            <img src="Imagenes/cama tierra 2.jpeg" alt="Encerramiento" style="width: 80%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 8%; left: 45%;" onclick="abrirModal('modal6')">🍴</div>
+        <div id="modal6" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal6')">&times;</span>
+            <h3>Cocina</h3>
+            <img src="Imagenes/cocina 1.jpeg" alt="Encerramiento" style="width: 80%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 20%; left: 45%;" onclick="abrirModal('modal7')">👥</div>
+        <div id="modal7" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal7')">&times;</span>
+            <h3>Encuentros</h3>
+            <img src="Imagenes/zona social.jpeg" alt="Encerramiento" style="width: 80%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 60%; left: 65%;" onclick="abrirModal('modal8')">🐛</div>
+        <div id="modal8" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal8')">&times;</span>
+            <h3>Zona compostaje</h3>
+            <img src="Imagenes/zona compostaje.jpeg" alt="Encerramiento" style="width: 80%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 80%; left: 62%;" onclick="abrirModal('modal9')">🪴</div>
+        <div id="modal9" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal9')">&times;</span>
+            <h3>Plantas</h3>
+            <img src="Imagenes/plantas 3.jpeg" alt="Encerramiento" style="max-width: 300px; height: auto; display: block; margin: 1rem auto; border-radius: 10px;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 57%; left: 15%;" onclick="abrirModal('modal10')">🔎 </div>
+        <div id="modal10" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal10')">&times;</span>
+            <h3>Perspectiva general huerta</h3>
+            <img src="Imagenes/General vista.jpeg" alt="Encerramiento" style="max-width: 300px; height: auto; display: block; margin: 1rem auto; border-radius: 10px;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 68%; left: 58%;" onclick="abrirModal('modal11')">👣 </div>
+        <div id="modal11" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal11')">&times;</span>
+            <h3>Pasillo</h3>
+            <img src="Imagenes/pasillo 2.jpeg" alt="Encerramiento" style="max-width: 300px; height: auto; display: block; margin: 1rem auto; border-radius: 10px;">
+          </div>
+        </div>
+
+        <div class="emoji-punto" style="top: 90%; left: 22%;" onclick="abrirModal('modal12')">🥔</div>
+        <div id="modal12" class="modal-huerta">
+          <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal('modal12')">&times;</span>
+            <h3>Cultivo</h3>
+            <img src="Imagenes/plantas.jpeg" alt="Encerramiento" style="width: 80%; border-radius: 10px; margin-top: 1rem;">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <section class="seccion_videos">
+      <h2>Recorridos por la Huerta Santa Elena</h2>
+      <p class="descripcion_videos">
+        Conoce los distintos rincones de la huerta a través de estos videos. Desde los semilleros hasta la compostera, cada espacio tiene su historia y su energía.
+      </p>
+
+      <div class="galeria_videos">
+
+        <div class="video_item">
+          <video controls>
+            <source src="Imagenes/recorrido 1.mov" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+          <p>Recorrido general de la huerta</p>
+        </div>
+
+        <div class="video_item">
+          <video controls>
+            <source src="Imagenes/recorrido 1.mov" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+          <p>Zona de plantas medicinales</p>
+        </div>
+
+        <div class="video_item">
+          <video controls>
+            <source src="Imagenes/recorrido 1.mov" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+          </video>
+          <p>Zona de plantas medicinales</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <!-- Bibliografía -->
+    <section class="caja">
+        <div class="header">
+          <span class="icono">📝</span>
+          <h2>Bibliografía</h2>
+          <button class="btn-toggle">Ver más ›</button>
+        </div>
+        <div class="contenido">
+        </div>
+    </section>
+
+
+  
+
+
+
+    <!-- Apartado JS para devolver las trajetas a su estado frontal -->
+    <script> 
+      window.addEventListener('scroll', () => {
+        const flippedCards = document.querySelectorAll('.card.flipped');
+        flippedCards.forEach(card => {
+          card.classList.remove('flipped');
+        });
+      });
+    </script>
+
+    <script>
+      let lastScrollTop = 0;
+      const header = document.querySelector("header");
+      const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
+
+      window.addEventListener("scroll", () => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          if (scrollTop > lastScrollTop) {
+              // Scroll hacia abajo: ocultar header
+              header.classList.add("header-hidden");
+          } else {
+              // Scroll hacia arriba: mostrar header
+              header.classList.remove("header-hidden");
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
+      // Ocultar menú cuando se hace clic en una opción
+      navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+              header.classList.add("header-hidden");
+          });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
+          const target = document.getElementById(targetId);
+          const offset = 100; // Altura del header
+
+          window.scrollTo({
+            top: target.offsetTop - offset,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname);
+          window.scrollTo(0, 0);
+        }
+      });
+    </script>
+
+    <!--SCRIPT CARRUSEL-->
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".storytelling-carrusel .slide");
+      mostrarSlide(slideIndex);
+
+      function moverCarrusel(n) {
+        slideIndex += n;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        mostrarSlide(slideIndex);
+      }
+
+      function mostrarSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+      }
+    </script>
+    <!--SCRIPT CARRUSEL-->
+
+    <!--SCRIPT PERFIL ME-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const titulo = document.querySelector(".acordeon_titulo");
+        const contenido = document.querySelector(".acordeon_contenido");
+        const cerrarBtn = document.querySelector(".acordeon_cerrar");
+
+        titulo.addEventListener("click", () => {
+          contenido.style.maxHeight = contenido.scrollHeight + "px";
+        });
+
+        cerrarBtn.addEventListener("click", () => {
+          contenido.style.maxHeight = null;
+        });
+      });
+    </script>
+    <!--SCRIPT PERFIL ME-->
+
+    <!--SCRIPT VIDEOS-->
+    <script>
+      function abrirModal(id) {
+        document.getElementById(id).style.display = "flex";
+      }
+
+      function cerrarModal(id) {
+        document.getElementById(id).style.display = "none";
+      }
+    </script>
+    <!--SCRIPT VIDEOS-->
+
+
+
+    
+
+  </body>
+</html>
