@@ -1,7 +1,7 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #DEE2B0;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #DEE2B0;
 }
 
 html {
@@ -43,7 +43,7 @@ html {
 
 /* ------------ BANNER 1 --------------- */
 .banner1 {
-  background-image: url('Imagenes/fotointroduccion.png');
+  background: url(Imagenes/fotointroduccion.png) center/cover no-repeat;
 }
 
 .contenido_banner1 {
