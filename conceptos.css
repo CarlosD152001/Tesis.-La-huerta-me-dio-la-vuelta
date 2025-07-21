@@ -134,9 +134,9 @@ header label {
 header label:hover {
     background: #dbe7d4;
 }
-
+/*INICIO HERO SECTION*/
 .hero_section_discusión {
-    background: url('Imagenes/bogotá.jpg') center/cover no-repeat;
+    background: url('Imagenes/ciudad\ 1.jpeg') center/cover no-repeat;
     margin-top: 8rem;
     margin-bottom: 10px;
     margin-left: 70px;
@@ -212,6 +212,90 @@ header label:hover {
 }
 
 .hero_texto_discusión_conceptos p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 2.2;
+    text-align: justify;
+}
+
+.hero_section_discusión2 {
+    background: url('Imagenes/ciudad\ 1.jpeg') center/cover no-repeat;
+    margin-top: 4rem;
+    margin-bottom: 10px;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #e6efe4; /* verde grisáceo muy suave */
+    border: 2px solid #000000;
+    padding: 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); /* sombra ligera */
+    border-radius: 0; /* rectangular */
+}
+
+.hero_texto_discusión2 {
+    background-color: rgba(255, 255, 255, 0.9); /* verde claro suave */
+    padding: 2rem;
+    width: 100%;
+    text-align: justify;
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+    border: 1px solid #a2b89a;
+}
+
+.hero_texto_discusión2 h1 {
+    margin: 0;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero_texto_discusión2 p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #000000;
+    line-height: 2.2;
+    text-align: justify;
+}
+
+.hero_texto_discusión_conceptos2 {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  /* ancho = 100% menos los márgenes izquierdo y derecho */
+  width: calc(100% - 140px);
+  box-sizing: border-box;  /* incluye padding/borde en el width */
+  text-align: justify;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+  border: 1px solid #a2b89a;
+  margin: 2rem 70px;       /* 2rem arriba/abajo, 70px izq/der */
+}
+
+.hero_texto_discusión_conceptos2 h1 {
+    margin: 0;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero_texto_discusión_conceptos2 p {
     margin-top: 2rem;
     font-size: 1.2rem;
     color: #000000;

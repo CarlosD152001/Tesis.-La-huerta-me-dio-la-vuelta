@@ -1,122 +1,354 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reflexiones</title>
-  <link rel="stylesheet" href="estilos.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Reflexiones</title>
+    <link rel="stylesheet" href="compostaje.css" />
+  </head>
 
-<body>
+  <body>
 
-  <header>
-    <a href="index.html" class="logo">Introducción</a>
-    
-    <input type="checkbox" id="menú_bar">
-    <label for="menú_bar">Menú</label>
-    
-    <nav class="nav_bar">
-      <ul class="nav_list">
-        <li class="nav_element nav_element_inicio">
-          <a href="index.html" class="nav_opción">
-            <img src="Imagenes/inicio.svg" alt="Inicio" class="icono_inicio">
-          </a>
-        </li>
-        <li class="nav_element">
-          <a href="#soberanía_alimentaria" class="nav_opción">Contexto</a>
-        </li>
-        <li class="nav_element">
-          <a href="#urbanización" class="nav_opción">Objetivos</a>
-        </li>
-        <li class="nav_element">
-          <a href="#urbanización" class="nav_opción">Justificación</a>
-        </li>
-        <li class="nav_element">
-          <a href="#urbanización" class="nav_opción">Sobre la página</a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+        <a href="index.html" class="logo"></a>
+        <input type="checkbox" id="menú_bar">
+        <label for="menú_bar">Menú</label>
+        <nav class="nav_bar">
+          <ul class="nav_list">
+            <li class="nav_element">
+                <a href="inicio.html" class="nav_opción_inicio">
+                  <img src="Imagenes/flecha-izquierda.png" alt="Inicio" class="icono_inicio">
+                </a>
+            </li>
+            <li class="nav_element">
+              <a href="index.html" class="nav_opción_inicio">
+              <img src="Imagenes/inicio.svg" alt="Inicio" class="icono_inicio">
+              </a>
+            </li>
+          </ul>
+        </nav>
+    </header>
 
-  </header>
-
-  <section class="hero_section_introducción">
-    <div class="hero_texto">
-      <h1>Título de la sección</h1>
-      <p>Un mensaje claro que contraste con la imagen</p>
-    </div>
-  </section>
-
-
-  <main>
-    <section>
-      <p>La historia de Helena nos invita a reflexionar sobre cómo habitamos la ciudad, el valor de la tierra y la necesidad de defender nuestros territorios de vida. Esta huerta es testimonio de resistencia, transformación y dignidad.</p>
+    <section class="hero_section_introducción">
+      <div class="hero_texto">
+        <p>
+          Compostarse no es una acción habitual o que pueda interpretarse con facilidad, y es en la experiencia de la Huerta Santa Elena donde cobra un significado propio y lleno de valor. No alude a una técnica, sino a un proceso de transformación interna y colectiva, que parte del proceso de compostaje, donde lo principal es remover lo que se carga, reelaborar lo que parece inservible y dar forma a algo nuevo con lo que quedó. Así como el compost no es residuo, sino tierra por venir, la soberanía alimentaria que se cultiva desde abajo no surge de condiciones ideales, sino de lo que se sostiene sin garantías: lo que se guarda, lo que se comparte, lo que no encaja en el orden establecido.
+        </p>
+        <p>
+          La idea de compostarnos nace precisamente del gesto contrario a comportarnos. Comportarnos como la dependencia nos lo exige, como la ciudad transformada nos lo reclama, como el sistema espera que lo hagamos. Compostarse, en cambio, es rehusarse a seguir esas formas de obediencia. Es actuar desde el propio reconocimiento, desde lo que sentimos que tiene valor aunque haya sido descartado. En vez de ajustarnos a un orden que excluye, hacemos otro con lo que tenemos.
+        </p>
+      
+      </div>
     </section>
-  </main>
 
-<!-- Apartado JS para devolver las trajetas a su estado frontal -->
-  <script> 
-    window.addEventListener('scroll', () => {
-      const flippedCards = document.querySelectorAll('.card.flipped');
-      flippedCards.forEach(card => {
-        card.classList.remove('flipped');
+    <div class="container_cajas_discusión">
+
+        <div class="fila_cajas_discusión">
+          <section class="caja_acordeon_discusión">
+            <div class="encabezado_discusión"> Saberes ocultos </div>
+              <div class="contenido_discusión">
+                <section class="subseccion_discusión">
+                  <p>
+                    En la huerta, mucho de lo que ocurre no está mediado por discursos formales ni por explicaciones teóricas, sino por el mero sentido y valor que las personas le otorgan a lo que en su cotidianidad realizan. Lo particular de esta experiencia es 
+                    que no siempre hay un nombre claro para lo que se ejecuta, o simplemente no se comparte con la manera en que quienes estamos fuera de la huerta solemos nombrarlo. Por eso, darle una explicación común o estandarizada a lo que significa sembrar, 
+                    cuidar, asociar, construir y proteger, no solo llega a ser impreciso dentro de estos espacios, sino que también resulta ser un limitante. Dichos significados, muy al contrario de ser algo dado, nacen y se construyen desde el ensayo y la repetición a través del cuerpo y la mente. 
+                  </p>
+                  <p style="margin-top: 2rem;">
+                    Este tipo de conocimiento no necesita ser validado por agentes externos, especialmente cuando estos desconocen la magnitud del beneficio, la profunda relación con la tierra, el bienestar social que traen, y su capacidad para sostener la vida. Por tanto, lo que se pone en juego es el 
+                    saber que no siempre se dice ni reconoce, pero que orienta y acompaña, dando como resultado una forma de inteligencia práctica que opera desde la acción y la experiencia, y se aleja de la teoría.
+                  </p>
+
+                  <div class="imagen_con_mensaje">
+                    <img src="Imagenes/Proceso alimentar tierra.png" alt="Foto alimentar tierra">
+                    <div class="mensaje_hover">
+                      <p>
+                        Proceso para alimentar la tierra con residuos provenientes de la huerta. Sin uso de productos externos.
+                      </p>
+                      <p class="fuente">
+                        Fuente: Foto propia
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="parrafos_lado_a_lado_saberes">
+                    <p>
+                      No se trata únicamente de producir alimento, sino de activar formas de conocimiento que han sido históricamente desplazadas o ignoradas por los discursos hegemónicos sobre lo urbano. Esta sabiduría, que nace desde la relación directa con la tierra, tiene un valor propio, no necesita ser traducida para ser válida, y se transmite por medio del hacer colectivo. En este sentido, la huerta no es solo un espacio de cultivo, sino un lugar de memoria, intercambio y construcción simbólica que permite la emergencia de otros lenguajes, otras formas de entender el mundo y otras maneras de habitar la ciudad. Su potencia está en que no pide permiso, simplemente florece.
+                    </p>
+                  </div>
+                  <p style="margin-top: 2rem;">
+                    Entender el lenguaje de la huerta, desde la propia huerta, es el camino correcto para poder abordar la profundad de los procesos y sus oportunidades, pues cuando la teoría intenta capturar estas prácticas sin reconocer su forma de existir, únicamente termina por neutralizarlas. 
+                    Es por eso por lo que hablar sobre saberes ocultos no es hacer referencia a algo que está escondido, sino de algo que está presente en el espacio, pero que no entra tan fácilmente en el foco de quienes habitamos la ciudad.
+                    Esta forma de conocimiento es la que hace posible hablar sobre soberanía alimentaria desde una perspectiva situada y real, por lo menos desde la forma de ejercerla y construirla. Esta posibilidad se sostiene en que el saber no nombrado que nace desde el hacer es, en sí mismo, una expresión de autonomía; no se trata de un conocimiento delegado o impuesto.
+                  </p>
+                </section>
+              </div>
+          </section>
+        </div>
+    </div>
+
+    <div class="container_cajas_discusión">
+
+        <div class="fila_cajas_discusión">
+          <section class="caja_acordeon_discusión">
+            <div class="encabezado_discusión">Experiencia como producción situada</div>
+              <div class="contenido_discusión">
+                <section class="subseccion_discusión">
+                  <p>
+                    Sembrar en el entorno urbano transforma tanto el suelo como a quien lo habita. La experiencia del alimento, vivida desde la siembra, el cuidado, la espera y la cosecha, se convierte en una práctica situada que se enraíza en condiciones materiales y simbólicas. Por un lado, están los elementos tangibles: el espacio disponible, las semillas, las herramientas, los recursos. Por otro, están las memorias, los trayectos personales, los afectos y los saberes que se entrelazan alrededor del cultivo y lo dotan de sentido.
+                  </p>
+
+                  <div class="imagen_con_mensaje">
+                    <img src="Imagenes/Proceso alimentar tierra.png" alt="Foto alimentar tierra">
+                    <div class="mensaje_hover">
+                      <p>
+                        Proceso para alimentar la tierra con residuos provenientes de la huerta. Sin uso de productos externos.
+                      </p>
+                      <p class="fuente">
+                        Fuente: Foto propia
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="parrafos_lado_a_lado_saberes">
+                    <p>
+                      La experiencia, entonces, no es solo algo que pasa, sino algo que se produce en la interacción con el entorno. En este caso, el entorno no es abstracto: es una ciudad que cambia constantemente, que expulsa huertas, que cerca el suelo, que pone en disputa los tiempos. Sembrar en estas condiciones implica no solo trabajo físico, sino también posicionamiento. Es una forma de responder a las restricciones con una práctica propia, construida desde lo vivido y no desde lo prescrito.
+                    </p>
+                    <p>
+                      Desde esta perspectiva, la experiencia no es una acción neutra, ni una simple acumulación de eventos, sino, como plantea E.P. Thompson, el lugar donde se forma la conciencia a partir del modo en que los sujetos viven las contradicciones que les atraviesan. No se trata solo de lo que ocurre, sino de cómo se interpreta y se actúa en relación con ello. En la huerta, cada decisión, qué sembrar, cómo compostar, a quién enseñar, está atravesada por condiciones concretas de vida y por una forma particular de entender el valor de lo que se hace.
+                    </p>
+                  </div>
+                  <p style="margin-top: 2rem;">
+                    Al igual que en el análisis de Thompson sobre la clase, aquí la conciencia no se hereda ni se impone: se forma desde la experiencia compartida, desde la historia que cada quien habita. En la Huerta Santa Elena, el alimento no es solo el resultado de un proceso técnico, sino el reflejo de una lucha silenciosa por sostener un vínculo con la tierra en medio de la transformación urbana. Reconocer esas condiciones —muchas veces adversas— es lo que permite valorar lo cultivado no por su cantidad, sino por lo que expresa: un proceso, una trayectoria, una transformación vivida.
+                  </p>
+                </section>
+              </div>
+          </section>
+        </div>
+    </div>
+
+    <div class="container_cajas_discusión">
+
+        <div class="fila_cajas_discusión">
+          <section class="caja_acordeon_discusión">
+            <div class="encabezado_discusión">Resistencia</div>
+              <div class="contenido_discusión">
+                <section class="subseccion_discusión">
+                  <p>
+                    En la huerta, mucho de lo que ocurre no está mediado por discursos formales ni por explicaciones teóricas, sino por el mero sentido y valor que las personas le otorgan a lo que en su cotidianidad realizan. Lo particular de esta experiencia es 
+                    que no siempre hay un nombre claro para lo que se ejecuta, o simplemente no se comparte con la manera en que quienes estamos fuera de la huerta solemos nombrarlo. Por eso, darle una explicación común o estandarizada a lo que significa sembrar, 
+                    cuidar, asociar, construir y proteger, no solo llega a ser impreciso dentro de estos espacios, sino que también resulta ser un limitante. Dichos significados, muy al contrario de ser algo dado, nacen y se construyen desde el ensayo y la repetición a través del cuerpo y la mente. 
+                  </p>
+                  <p style="margin-top: 2rem;">
+                    Este tipo de conocimiento no necesita ser validado por agentes externos, especialmente cuando estos desconocen la magnitud del beneficio, la profunda relación con la tierra, el bienestar social que traen, y su capacidad para sostener la vida. Por tanto, lo que se pone en juego es el 
+                    saber que no siempre se dice ni reconoce, pero que orienta y acompaña, dando como resultado una forma de inteligencia práctica que opera desde la acción y la experiencia, y se aleja de la teoría.
+                  </p>
+
+                  <div class="imagen_con_mensaje">
+                    <img src="Imagenes/Proceso alimentar tierra.png" alt="Foto alimentar tierra">
+                    <div class="mensaje_hover">
+                      <p>
+                        Proceso para alimentar la tierra con residuos provenientes de la huerta. Sin uso de productos externos.
+                      </p>
+                      <p class="fuente">
+                        Fuente: Foto propia
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="parrafos_lado_a_lado_saberes">
+                    <p>
+                      No se trata únicamente de producir alimento, sino de activar formas de conocimiento que han sido históricamente desplazadas o ignoradas por los discursos hegemónicos sobre lo urbano. Esta sabiduría, que nace desde la relación directa con la tierra, tiene un valor propio, no necesita ser traducida para ser válida, y se transmite por medio del hacer colectivo.
+                    </p>
+                    <p>
+                      En este sentido, la huerta no es solo un espacio de cultivo, sino un lugar de memoria, intercambio y construcción simbólica que permite la emergencia de otros lenguajes, otras formas de entender el mundo y otras maneras de habitar la ciudad. Su potencia está en que no pide permiso, simplemente florece.
+                    </p>
+                  </div>
+                  <p style="margin-top: 2rem;">
+                    Entender el lenguaje de la huerta, desde la propia huerta, es el camino correcto para poder abordar la profundad de los procesos y sus oportunidades, pues cuando la teoría intenta capturar estas prácticas sin reconocer su forma de existir, únicamente termina por neutralizarlas. 
+                    Es por eso por lo que hablar sobre saberes ocultos no es hacer referencia a algo que está escondido, sino de algo que está presente en el espacio, pero que no entra tan fácilmente en el foco de quienes habitamos la ciudad.
+                  </p>
+                </section>
+              </div>
+          </section>
+        </div>
+    </div>
+
+    <div class="container_sección">
+
+        <section class="texto_titulo_tarjetas1">
+            
+            <div class="compost-block">
+                <div class="compost-text">
+                    <h3>Soberanía en lo cotidiano</h3>
+                    <p>
+                        En la Huerta Santa Elena, la soberanía alimentaria no se formula como un ideal, sino como una práctica cotidiana que persiste, se adapta y se reinventa. No depende de planes externos ni de instituciones, sino del gesto sostenido y decidido de cultivar con lo que se tiene, de transformar lo que se descarta y de cuidar lo que crece en medio de la incertidumbre. Lo soberano se vuelve entonces: cuerpo en la compostera, intención en la semilla, decisión en la cocina y vínculo en la palabra y enseñanza.
+                    </p>
+                    <p>
+                      Las definiciones más amplias de soberanía alimentaria han insistido en la necesidad de garantizar el acceso a alimentos sanos, producidos de manera sostenible, con autonomía territorial y dignidad para quienes los cultivan. En la experiencia de María Elena, muchas de estas dimensiones no solo se afirman, sino que se sostienen desde abajo: no por garantía, sino por insistencia. Dentro de estas estan la tierra que trabaja, la cual no es dada sino creada, las semillas que son el resultado de intercambios, creaciones y transformaciones, el conocimiento que circula y que no espera certificación o aprobación, solo escucha y respeto.
+                    </p>
+                    
+
+                    <img src="Imagenes/diversidad.jpeg" alt="Huerta Santa Elena" class="imagen-huerta">
+                    <p>
+                      Sin embargo, el mismo hacer cotidiano que sostiene esta forma de soberanía también revela sus límites estructurales. María Elena lo ha dicho con claridad: en la ciudad, la única forma de hacer agricultura urbana sin tener que pelear por la tierra es siendo dueña del terreno. Esa afirmación expone de forma directa una de las grandes contradicciones del modelo: la soberanía alimentaria requiere autonomía territorial, pero en contextos urbanos marcados por el despojo y la especulación, cultivar depende muchas veces de una condición que no todos pueden cumplir: la propiedad del suelo. Lo que se presenta como un derecho, en la práctica, se vuelve una excepción.
+                    </p>
+
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
+
+    <div class="container_sección">
+
+        <section class="texto_titulo_tarjetas1">
+            
+            <div class="compost-block">
+                <div class="compost-text">
+                    <h3>Semilla como reflejo de ciudad</h3>
+                    <p>
+                        En la experiencia de la Huerta Santa Elena, la diversidad de semillas cultivadas no solo responde a necesidades alimentarias o ecológicas, sino que también refleja algo más profundo: la diversidad social, cultural e histórica que compone la ciudad. Cada semilla sembrada, cada variedad que ha brotado en el suelo creado por María Elena, lleva consigo una historia, una intención y una relación distinta con el territorio, que en conjunto, configuran un paisaje alimentario tan complejo como el urbano.
+                    </p>
+                    
+                    <p>
+                        En una ciudad como Bogotá, donde no existe un solo modelo de habitar, tambien se puede pensar en los diferentes modelos de cultivo que en esta se situan. Por ejemplo, cada semilla encarna una intención distinta: sembrar para comer, para sanar, para probar, para observar, o para compartir, y es en esa diversidad de intenciones donde se proyecta el por qué, y el cómo, se cuida, se habita y se vive. Esa coexistencia no responde a una planificación rígida, sino a una práctica situada: semillas que han llegado por diferentes medios y propositos, pero que responden a una misma necesidad de crecimiento, configurando asi un sistema vivo y abierto, tal como ocurre en la ciudad misma.
+                    </p>
+
+                    <p>
+                        María Elena lo expresa con claridad: “la diversidad también son las intenciones con las que se cultiva”. Lo que crece en la huerta no responde a una lógica de estandarización ni de eficiencia, sino a una forma de relación situada. Por eso, una misma planta puede tener múltiples sentidos, y una misma especie, muchas versiones. Esa variedad, lejos de ser una curiosidad, es una forma de sostener vida en una ciudad que tiende a homogeneizar, a dividir y a controlar los usos del suelo. Las semillas no solo resisten desde la biología, sino desde lo simbólico y lo político. Su presencia confirma que en la ciudad también hay lugar para la multiplicidad, para la reproducción de lo que no circula por el mercado, y para el cultivo como expresión concreta de un modelo de apropiación y transformación urbana.
+                    </p>
+                    <img src="Imagenes/diversidad.jpeg" alt="Huerta Santa Elena" class="imagen-huerta">
+
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
+
+    <div class="container_sección">
+
+        <section class="texto_titulo_tarjetas1">
+            
+            <div class="compost-block">
+                <div class="compost-text">
+                    <h3>Semilla como reflejo de ciudad</h3>
+                    <p>
+                        En la experiencia de la Huerta Santa Elena, la diversidad de semillas cultivadas no solo responde a necesidades alimentarias o ecológicas, sino que también refleja algo más profundo: la diversidad social, cultural e histórica que compone la ciudad. Cada semilla sembrada, cada variedad que ha brotado en el suelo creado por María Elena, lleva consigo una historia, una intención y una relación distinta con el territorio, que en conjunto, configuran un paisaje alimentario tan complejo como el urbano.
+                    </p>
+                    
+                    <p>
+                        En una ciudad como Bogotá, donde no existe un solo modelo de habitar, tambien se puede pensar en los diferentes modelos de cultivo que en esta se situan. Por ejemplo, cada semilla encarna una intención distinta: sembrar para comer, para sanar, para probar, para observar, o para compartir, y es en esa diversidad de intenciones donde se proyecta el por qué, y el cómo, se cuida, se habita y se vive. Esa coexistencia no responde a una planificación rígida, sino a una práctica situada: semillas que han llegado por diferentes medios y propositos, pero que responden a una misma necesidad de crecimiento, configurando asi un sistema vivo y abierto, tal como ocurre en la ciudad misma.
+                    </p>
+
+                    <p>
+                        María Elena lo expresa con claridad: “la diversidad también son las intenciones con las que se cultiva”. Lo que crece en la huerta no responde a una lógica de estandarización ni de eficiencia, sino a una forma de relación situada. Por eso, una misma planta puede tener múltiples sentidos, y una misma especie, muchas versiones. Esa variedad, lejos de ser una curiosidad, es una forma de sostener vida en una ciudad que tiende a homogeneizar, a dividir y a controlar los usos del suelo. Las semillas no solo resisten desde la biología, sino desde lo simbólico y lo político. Su presencia confirma que en la ciudad también hay lugar para la multiplicidad, para la reproducción de lo que no circula por el mercado, y para el cultivo como expresión concreta de un modelo de apropiación y transformación urbana.
+                    </p>
+                    <img src="Imagenes/diversidad.jpeg" alt="Huerta Santa Elena" class="imagen-huerta">
+
+                </div>
+            </div>
+            
+        </section>
+
+    </div>
+
+
+    <section class="hero_section_introducción">
+      <div class="hero_texto">
+        <p>
+          En un entorno urbano que prioriza la construcción sobre el cuidado, compostarse es un modo de permanencia. No desde la resistencia frontal, sino desde la decisión cotidiana de no desaparecer. María Elena no solo continúa compostando su suelo: ha aprendido a compostarse a sí misma. No cultiva como antes, pero no ha dejado de sostener. Lo que se desecha se transforma, y en ese proceso ella también se transforma. Lo que hace en la tierra no está separado de lo que pasa dentro de ella.
+        </p>
+        <p>
+          Compostarse es también recomponer los vínculos, la memoria, el modo en que nos relacionamos con lo que nos alimenta. Es, como dice María Elena, un encuentro de “yo con yo”, donde el alimento, la palabra, la semilla y el gesto se confunden. No hay aquí una línea clara entre lo personal y lo político: hay experiencia. Y desde esa experiencia, una forma de soberanía que no se proclama, sino que se practica con lo que hay. En esos gestos, en esa tierra que no compite sino que se construye, se sostiene otra forma de habitar la ciudad. Una que no espera a ser reconocida para existir. Una que se afirma en el hacer lento, en el residuo transformado, en el deseo de no dejar de cuidar lo que aún puede crecer.
+        </p>
+      
+      </div>
+    </section>
+
+
+    <!-- Apartado JS para devolver las trajetas a su estado frontal -->
+    <script> 
+      window.addEventListener('scroll', () => {
+        const flippedCards = document.querySelectorAll('.card.flipped');
+        flippedCards.forEach(card => {
+          card.classList.remove('flipped');
+        });
       });
-    });
-  </script>
+    </script>
 
-  <script>
-    let lastScrollTop = 0;
-    const header = document.querySelector("header");
-    const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
+    <script>
+      let lastScrollTop = 0;
+      const header = document.querySelector("header");
+      const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
 
-    window.addEventListener("scroll", () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop) {
-            // Scroll hacia abajo: ocultar header
-            header.classList.add("header-hidden");
-        } else {
-            // Scroll hacia arriba: mostrar header
-            header.classList.remove("header-hidden");
+      window.addEventListener("scroll", () => {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          
+          if (scrollTop > lastScrollTop) {
+              // Scroll hacia abajo: ocultar header
+              header.classList.add("header-hidden");
+          } else {
+              // Scroll hacia arriba: mostrar header
+              header.classList.remove("header-hidden");
+          }
+
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      });
+
+      // Ocultar menú cuando se hace clic en una opción
+      navLinks.forEach(link => {
+          link.addEventListener("click", () => {
+              header.classList.add("header-hidden");
+          });
+      });
+    </script>
+
+    <script>
+      document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
+          const target = document.getElementById(targetId);
+          const offset = 100; // Altura del header
+
+          window.scrollTo({
+            top: target.offsetTop - offset,
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (window.location.hash) {
+          history.replaceState(null, null, window.location.pathname);
+          window.scrollTo(0, 0);
         }
+      });
+    </script>
 
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
-
-    // Ocultar menú cuando se hace clic en una opción
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            header.classList.add("header-hidden");
-        });
-    });
-  </script>
-
-  <script>
-    document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
-      button.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
-        const target = document.getElementById(targetId);
-        const offset = 100; // Altura del header
-
-        window.scrollTo({
-          top: target.offsetTop - offset,
-          behavior: 'smooth'
+    <!--Script de la sección de la despliegue de la cajas de discusión-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const acordeones = document.querySelectorAll(".caja_acordeon_discusión");
+      
+        acordeones.forEach(acordeon => {
+          const encabezado = acordeon.querySelector(".encabezado_discusión");
+      
+          encabezado.addEventListener("click", () => {
+            // Alterna la clase "activa" en la caja clickeada
+            acordeon.classList.toggle("activa");
+          });
         });
       });
-    });
-  </script>
-
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      if (window.location.hash) {
-        history.replaceState(null, null, window.location.pathname);
-        window.scrollTo(0, 0);
-      }
-    });
-  </script>
+    </script>
 
 
 
-</body>
+  </body>
+
 </html>

@@ -290,11 +290,12 @@ header label:hover {
     font-style: italic;
     font-size: 1.5rem;
     color: #000000;
-    max-width: 950px;
-    margin: 10rem auto;
+    max-width: 980px;
+    margin: 8rem auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     border: 1px solid black;
 }
+
 .cita-modulo small {
     display: block;
     margin-top: 1.5rem;
@@ -364,6 +365,155 @@ header label:hover {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+/*FINAL HERO SEMILLA*/
 
 
 /*FINAL SEMILLA*/
+
+
+/*INICIO COMPOSTEMONOS*/
+/*Inicio apartado de las cajas discusión*/
+.container_cajas_discusión {
+    margin: 2rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+}
+
+.fila_cajas_discusión {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.caja_acordeon_discusión {
+    flex: 1 1 45%;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    border: 1px solid #d4d4d4;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-width: 320px;
+    overflow: hidden;
+}
+
+.caja_acordeon_discusión:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.encabezado_discusión {
+    background-color: #1e5631;
+    color: white;
+    padding: 1.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contenido_discusión {
+    display: none;
+    max-height: 550px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.caja_acordeon_discusión.activa .contenido_discusión {
+    display: block;
+}
+
+/* Scrollbar */
+.contenido_discusión::-webkit-scrollbar {
+    width: 6px;
+}
+.contenido_discusión::-webkit-scrollbar-thumb {
+    background-color: #a8d5ba;
+    border-radius: 5px;
+}
+
+/* Texto */
+.subseccion_discusión p {
+    margin-bottom: 1rem;
+    margin-top: 1.3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: #000000;
+}
+
+/* Parrafos lado a lado */
+.parrafos_lado_a_lado_saberes {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.parrafos_lado_a_lado_saberes p {
+    flex: 1 1 45%;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* Imagen con mensaje */
+.imagen_con_mensaje {
+    position: relative;
+    width: 70%;
+    margin: 2rem auto;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.imagen_con_mensaje img {
+    width: 100%;
+    display: block;
+    transition: filter 0.4s ease;
+    border-radius: 15px;
+}
+
+.mensaje_hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+.mensaje_hover p:first-of-type {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 1rem;
+    color: white;
+}
+
+.mensaje_hover .fuente {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.imagen_con_mensaje:hover img {
+    filter: blur(1px) brightness(0.7);
+}
+.imagen_con_mensaje:hover .mensaje_hover {
+    opacity: 1;
+}
+/*Final apartado de los paneles discusión*/
+/*FINAL COMPOSTEMONOS*/
