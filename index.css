@@ -43,7 +43,7 @@ html {
 
 /* ------------ BANNER 1 --------------- */
 .banner1 {
-  background-image: url('/Imagenes/fotointroduccion.png');
+  background-image: url('Imagenes/fotointroduccion.png');
 }
 
 .contenido_banner1 {
