@@ -187,6 +187,7 @@ header label:hover {
     text-align: justify;
 }
 
+
 .hero_texto_discusión_conceptos {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
@@ -221,7 +222,7 @@ header label:hover {
 
 .hero_section_discusión2 {
     background: url('Imagenes/ciudad\ 1.jpeg') center/cover no-repeat;
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-bottom: 10px;
     margin-left: 70px;
     margin-right: 70px;
