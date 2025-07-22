@@ -157,7 +157,7 @@ header label:hover {
     border-radius: 12px;
     position: relative;
     border: 2px solid #000;      /* cuadro exterior */
-    background: url(/Imagenes/urban_scene_cartoon.jpg) center/cover no-repeat;
+    background: url(Imagenes/inicio2.jpg) center/cover no-repeat;
     padding: 14rem 2rem;           /* espacio interior para que no choque con el cuadro interno */
     display: flex;
     justify-content: center;
@@ -186,7 +186,7 @@ header label:hover {
     border-radius: 12px;
     position: relative;
     border: 2px solid #000;      /* cuadro exterior */
-    background: url(/Imagenes/Santa\ elena\ foto\ index.png) center/cover no-repeat;
+    background: url(Imagenes/inicio\ 3.png) center/cover no-repeat;
     padding: 14rem 2rem;           /* espacio interior para que no choque con el cuadro interno */
     display: flex;
     justify-content: center;
@@ -216,7 +216,7 @@ header label:hover {
     margin-bottom: 50px;
     position: relative;
     border: 2px solid #000;      /* cuadro exterior */
-    background: url(/Imagenes/imagen\ conclusion.png) center/cover no-repeat;
+    background: url(Imagenes/inicio4.png) center/cover no-repeat;
     padding: 14rem 2rem;           /* espacio interior para que no choque con el cuadro interno */
     display: flex;
     justify-content: center;
