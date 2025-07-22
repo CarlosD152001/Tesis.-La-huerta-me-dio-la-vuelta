@@ -92,7 +92,7 @@ html {
 
 /* ------------ BANNER 2 --------------- */
 .banner2 {
-  background-image: url('/Imagenes/foto introducción.png'); /* Puedes cambiar esta imagen */
+  background: url(Imagenes/fotointroduccion.png) center/cover no-repeat;
 }
 
 .contenido_banner2 {
