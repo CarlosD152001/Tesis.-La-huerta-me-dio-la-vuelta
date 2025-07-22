@@ -835,6 +835,7 @@ header label:hover {
     margin-left: 4.5rem;
     margin-right: 4.5rem;
     margin: 0 4.5rem 3rem;
+    margin-top: 4rem;
 }
 .caja:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);

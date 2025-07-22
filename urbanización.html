@@ -22,7 +22,7 @@
             <nav class="nav_bar">
                 <ul class="nav_list">
                 <li class="nav_element">
-                    <a href="inicio.html" class="nav_opción_inicio">
+                    <a href="conceptos.html" class="nav_opción_inicio">
                     <img src="Imagenes/flecha-izquierda.png" alt="Inicio" class="icono_inicio">
                     </a>
                 </li>
@@ -257,167 +257,167 @@
 
 
 
-    <!-- Apartado JS para devolver las tarjetas a su estado frontal -->
-        <script>
-            window.addEventListener('scroll', () => {
-            document.querySelectorAll('.card.flipped').forEach(card => {
-                card.classList.remove('flipped');
-            });
-            });
-        </script>
-
-    <!-- Ocultar/mostrar header al hacer scroll -->
-        <script>
-            let lastScrollTop = 0;
-            const headerEl = document.querySelector("header");
-            const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
-
-            window.addEventListener("scroll", () => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                headerEl.classList.add("header-hidden");
-            } else {
-                headerEl.classList.remove("header-hidden");
-            }
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-            });
-
-            navLinks.forEach(link => {
-            link.addEventListener("click", () => {
-                headerEl.classList.add("header-hidden");
-            });
-            });
-        </script>
-
-    <!-- Smooth scroll para inputs con onclick="location.href" -->
-        <script>
-            document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
-                const target = document.getElementById(targetId);
-                const offset = 100;
-                window.scrollTo({
-                top: target.offsetTop - offset,
-                behavior: 'smooth'
+        <!-- Apartado JS para devolver las tarjetas a su estado frontal -->
+            <script>
+                window.addEventListener('scroll', () => {
+                document.querySelectorAll('.card.flipped').forEach(card => {
+                    card.classList.remove('flipped');
                 });
-            });
-            });
-        </script>
-
-     <!-- Quitar hash y scroll to top al recargar con # -->
-        <script>
-            window.addEventListener('DOMContentLoaded', () => {
-            if (window.location.hash) {
-                history.replaceState(null, null, window.location.pathname);
-                window.scrollTo(0, 0);
-            }
-            });
-        </script>
-
-    <!-- Apertura/cierre simple (max-height) para .caja_acordeon -->
-        <script>
-            document.querySelectorAll('.caja_acordeon').forEach(caja => {
-            const encabezado = caja.querySelector('.encabezado');
-            const contenido  = caja.querySelector('.contenido');
-            encabezado.addEventListener('click', () => {
-                const abierto = contenido.style.maxHeight && contenido.style.maxHeight !== "0px";
-                contenido.style.maxHeight = abierto ? null : contenido.scrollHeight + "px";
-            });
-            });
-        </script>
-
-    <!-- Acordeón que cierra los demás al abrir uno -->
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-            const acordeones = document.querySelectorAll(".caja_acordeon, .caja_acordeon_footer");
-            acordeones.forEach(acordeon => {
-                const encabezado = acordeon.querySelector(".encabezado, .encabezado_footer");
-                const icono = encabezado.querySelector(".icono");
-                const cerrarBtn = acordeon.querySelector(".cerrar_btn");
-                encabezado.addEventListener("click", () => {
-                const yaActivo = acordeon.classList.contains("activa");
-                acordeones.forEach(item => {
-                    item.classList.remove("activa");
-                    const icon = item.querySelector(".icono");
-                    if (icon) icon.textContent = "+";
                 });
-                if (!yaActivo) {
-                    acordeon.classList.add("activa");
-                    if (icono) icono.textContent = "−";
-                }
-                });
-                if (cerrarBtn) {
-                cerrarBtn.addEventListener('click', e => {
-                    e.stopPropagation();
-                    acordeon.classList.remove("activa");
-                    if (icono) icono.textContent = "+";
-                });
-                }
-            });
-            });
-        </script>
+            </script>
 
-    <!-- Script de la galería -->
-        <script>
-            let posicion = 0;
-            function moverGaleria(direccion) {
-            const galeria = document.getElementById("galeria");
-            const tarjetas = galeria.querySelectorAll(".flip-card");
-            if (!tarjetas.length) return;
-            const tarjeta = tarjetas[0];
-            const estilo = window.getComputedStyle(tarjeta);
-            const ancho = tarjeta.offsetWidth + parseInt(estilo.marginRight || 0);
-            const visible = 2;
-            const total = tarjetas.length;
-            const maxPos = total - visible;
-            posicion += direccion;
-            if (posicion < 0) posicion = 0;
-            if (posicion > maxPos) posicion = maxPos;
-            galeria.style.transform = `translateX(-${posicion * ancho}px)`;
-            }
-        </script>
+        <!-- Ocultar/mostrar header al hacer scroll -->
+            <script>
+                let lastScrollTop = 0;
+                const headerEl = document.querySelector("header");
+                const navLinks = document.querySelectorAll(".nav_opción, .submenú_opción");
 
-    <!-- Script genérico para elementos .caja -->
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll('.caja').forEach(caja => {
-                const header = caja.querySelector('.header');
-                const btnCerrar = caja.querySelector('.btn-cerrar');
-                if (header) header.addEventListener('click', () => caja.classList.toggle('open'));
-                if (btnCerrar) btnCerrar.addEventListener('click', e => {
-                e.stopPropagation();
-                caja.classList.remove('open');
-                });
-            });
-            });
-        </script>
-
-    <!-- Nuevo script: cambia texto del botón según estado -->
-        <script>
-            document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll('.caja .btn-toggle').forEach(btn => {
-                const caja = btn.closest('.caja');
-                const contenido = caja.querySelector('.contenido');
-                // ocultar contenido por defecto
-                contenido.style.display = 'none';
-                btn.addEventListener('click', () => {
-                const abierta = caja.classList.toggle('activa');
-                if (abierta) {
-                    contenido.style.display = 'block';
-                    btn.textContent = 'Cerrar sección';
+                window.addEventListener("scroll", () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    headerEl.classList.add("header-hidden");
                 } else {
-                    contenido.style.display = 'none';
-                    btn.textContent = 'Ver más ›';
+                    headerEl.classList.remove("header-hidden");
+                }
+                lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+                });
+
+                navLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    headerEl.classList.add("header-hidden");
+                });
+                });
+            </script>
+
+        <!-- Smooth scroll para inputs con onclick="location.href" -->
+            <script>
+                document.querySelectorAll('input[onclick^="location.href"]').forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('onclick').match(/'#(.+?)'/)[1];
+                    const target = document.getElementById(targetId);
+                    const offset = 100;
+                    window.scrollTo({
+                    top: target.offsetTop - offset,
+                    behavior: 'smooth'
+                    });
+                });
+                });
+            </script>
+
+        <!-- Quitar hash y scroll to top al recargar con # -->
+            <script>
+                window.addEventListener('DOMContentLoaded', () => {
+                if (window.location.hash) {
+                    history.replaceState(null, null, window.location.pathname);
+                    window.scrollTo(0, 0);
                 }
                 });
-            });
-            });
-        </script>
+            </script>
+
+        <!-- Apertura/cierre simple (max-height) para .caja_acordeon -->
+            <script>
+                document.querySelectorAll('.caja_acordeon').forEach(caja => {
+                const encabezado = caja.querySelector('.encabezado');
+                const contenido  = caja.querySelector('.contenido');
+                encabezado.addEventListener('click', () => {
+                    const abierto = contenido.style.maxHeight && contenido.style.maxHeight !== "0px";
+                    contenido.style.maxHeight = abierto ? null : contenido.scrollHeight + "px";
+                });
+                });
+            </script>
+
+        <!-- Acordeón que cierra los demás al abrir uno -->
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                const acordeones = document.querySelectorAll(".caja_acordeon, .caja_acordeon_footer");
+                acordeones.forEach(acordeon => {
+                    const encabezado = acordeon.querySelector(".encabezado, .encabezado_footer");
+                    const icono = encabezado.querySelector(".icono");
+                    const cerrarBtn = acordeon.querySelector(".cerrar_btn");
+                    encabezado.addEventListener("click", () => {
+                    const yaActivo = acordeon.classList.contains("activa");
+                    acordeones.forEach(item => {
+                        item.classList.remove("activa");
+                        const icon = item.querySelector(".icono");
+                        if (icon) icon.textContent = "+";
+                    });
+                    if (!yaActivo) {
+                        acordeon.classList.add("activa");
+                        if (icono) icono.textContent = "−";
+                    }
+                    });
+                    if (cerrarBtn) {
+                    cerrarBtn.addEventListener('click', e => {
+                        e.stopPropagation();
+                        acordeon.classList.remove("activa");
+                        if (icono) icono.textContent = "+";
+                    });
+                    }
+                });
+                });
+            </script>
+
+        <!-- Script de la galería -->
+            <script>
+                let posicion = 0;
+                function moverGaleria(direccion) {
+                const galeria = document.getElementById("galeria");
+                const tarjetas = galeria.querySelectorAll(".flip-card");
+                if (!tarjetas.length) return;
+                const tarjeta = tarjetas[0];
+                const estilo = window.getComputedStyle(tarjeta);
+                const ancho = tarjeta.offsetWidth + parseInt(estilo.marginRight || 0);
+                const visible = 2;
+                const total = tarjetas.length;
+                const maxPos = total - visible;
+                posicion += direccion;
+                if (posicion < 0) posicion = 0;
+                if (posicion > maxPos) posicion = maxPos;
+                galeria.style.transform = `translateX(-${posicion * ancho}px)`;
+                }
+            </script>
+
+        <!-- Script genérico para elementos .caja -->
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                document.querySelectorAll('.caja').forEach(caja => {
+                    const header = caja.querySelector('.header');
+                    const btnCerrar = caja.querySelector('.btn-cerrar');
+                    if (header) header.addEventListener('click', () => caja.classList.toggle('open'));
+                    if (btnCerrar) btnCerrar.addEventListener('click', e => {
+                    e.stopPropagation();
+                    caja.classList.remove('open');
+                    });
+                });
+                });
+            </script>
+
+        <!-- Nuevo script: cambia texto del botón según estado -->
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                document.querySelectorAll('.caja .btn-toggle').forEach(btn => {
+                    const caja = btn.closest('.caja');
+                    const contenido = caja.querySelector('.contenido');
+                    // ocultar contenido por defecto
+                    contenido.style.display = 'none';
+                    btn.addEventListener('click', () => {
+                    const abierta = caja.classList.toggle('activa');
+                    if (abierta) {
+                        contenido.style.display = 'block';
+                        btn.textContent = 'Cerrar sección';
+                    } else {
+                        contenido.style.display = 'none';
+                        btn.textContent = 'Ver más ›';
+                    }
+                    });
+                });
+                });
+            </script>
 
 
    
 
-  </body>
+    </body>
 
 </html>
