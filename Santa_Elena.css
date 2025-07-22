@@ -459,7 +459,9 @@ header label:hover {
     margin-top: 2rem;
     text-decoration: underline;
     font-size: 2rem;
-    color: #000000;
+    color: #243D1D;
+    text-decoration: underline;
+    text-transform: uppercase;
     text-align: center;
 }
 
@@ -475,7 +477,8 @@ header label:hover {
   max-width: 1400px;               
   box-sizing: border-box;         
   background-color: #f0f3f3;
-  border-radius: 0;
+  border-radius: 12px;
+  border: 2px solid black;
 }
   
 .card_discusión {
@@ -715,13 +718,15 @@ header label:hover {
 
 .seccion_videos h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #000000;
+  margin-bottom: 4rem;
+  color: #243D1D;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 .descripcion_videos {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: #000000;
   max-width: 800px;
   margin-left: auto;
@@ -739,15 +744,16 @@ header label:hover {
 .video_item {
   background: #f0f3f3;
   padding: 1rem;
-  border-radius: 0;
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border: 2px solid black;
 }
 
 .video_item video {
   width: 100%;
   height: auto;
   max-height: 220px;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #000;
 }
 

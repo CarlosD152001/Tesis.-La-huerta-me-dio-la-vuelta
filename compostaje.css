@@ -188,6 +188,59 @@ header label:hover {
     margin-bottom: 2rem;
     text-align: justify;
 }
+
+.hero_section_introducción2 {
+    background: url('Imagenes/compostaje\ 2.jpeg') center/cover no-repeat;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-left: 70px;
+    margin-right: 70px;
+    background-color: #e6efe4; /* verde grisáceo muy suave */
+    border: 2px solid #000000;
+    padding: 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.06); /* sombra ligera */
+    border-radius: 0; /* rectangular */
+}
+
+.hero_texto2 {
+    background-color: rgba(242, 247, 241, 0.9); /* verde claro muy suave */
+    padding: 2rem;
+    width: 100%;
+    text-align: justify;
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+    border: 1px solid #000000;
+}
+
+.hero_texto2 h1 {
+    margin: 0;
+    color: #0f2b07; /* verde oscuro elegante */
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ligera sombra */
+}
+
+.hero_texto2 p {
+    font-size: 1.3rem;
+    color: #000000;
+    line-height: 2.2;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
 /*Final apartado del hero*/
 
 /*INICIO COMPOSTAJE*/
@@ -223,9 +276,10 @@ header label:hover {
 .compost-text h3 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #000000;
-  text-align: center;
+color: #243D1D;
   text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .compost-text p {

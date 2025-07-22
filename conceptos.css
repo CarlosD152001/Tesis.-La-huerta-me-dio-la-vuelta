@@ -332,15 +332,17 @@ header label:hover {
 }
 
 .texto_titulo_tarjetas1 {
-    background: #edeff0;
-    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    border-radius: 0;
     padding: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 2;
     color: #000;
     text-align: justify;
     box-shadow: 0 4px 10px rgba(0,0,0,0.06);
     margin: 4rem 70px 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .texto-item h5 {
@@ -371,17 +373,19 @@ header label:hover {
     background: transparent;
     border-radius: 12px;
     padding: 2rem;
+
 }
 
 .dimensiones-list li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  background: #DEE2B0;
-  padding: 1rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: #DEE2B0;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #000000;
 }
 .dimensiones-list li:hover {
   transform: translateY(-4px);
@@ -464,8 +468,8 @@ header label:hover {
 }
 
 .icon-btn {
-  background: none;
-  border: none;
+  background: #8DB2A2;
+  border-radius: 12px;
   font-size: 2.8rem;
   cursor: pointer;
   transition: transform 0.2s, color 0.2s;
@@ -718,18 +722,19 @@ header label:hover {
 
 /*Inicio apartado de cartas discusión*/
 .cards_container_discusión {
-  display: flex;
-  justify-content: center;
-  gap: 65px;
-  flex-wrap: wrap;
-  margin: 1rem auto;               
-  padding: 2.5rem 1rem;
-  padding-top: 0.5rem;             
-  width: 100%;                     
-  max-width: 1400px;               
-  box-sizing: border-box;         
-  background-color: #DEE2B0;
-  border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    flex-wrap: wrap;
+    margin: 1rem auto;               
+    padding: 2.5rem 1rem;
+    padding-top: 0.5rem;             
+    width: 100%;                     
+    max-width: 1400px;               
+    box-sizing: border-box;         
+    background-color: #DEE2B0;
+    border-radius: 15px;
+    border: 2px solid #000000;
 }
   
 .card_discusión {
